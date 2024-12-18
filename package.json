@@ -1,0 +1,29 @@
+{
+  "name": "jason-hailey-wedding",
+  "version": "1.0.0",
+  "description": "wedding website for guests",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Behindtheboard/jason-hailey-wedding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.16",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
