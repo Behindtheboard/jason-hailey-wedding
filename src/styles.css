@@ -176,6 +176,7 @@ body,
 header,
 #dropdown-container,
 #title,
+#countdown,
 #dropdown-menu :first-child {
   display: flex;
 }
@@ -183,6 +184,10 @@ header,
 header {
   justify-content: space-between;
   height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 25px;
   background-color: green;
 }
 
@@ -190,8 +195,22 @@ header {
   flex-direction: column;
   justify-content: center;
   font-size: 1.25rem;
-  padding-left: 16px;
   color: white;
+}
+
+#countdown {
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+#countdown div {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+#countdown :last-child {
+  padding-top: 10px;
 }
 
 #menu-button {
@@ -200,15 +219,15 @@ header {
   align-items: center;
 }
 
-#dropdown-menu :first-child {
-  padding: 0;
-  justify-content: end;
+img#menu-close-button {
+  padding-right: 25px;
+  padding-top: 10px;
+  width: 60px;
+  background-color: white;
 }
 
-#menu-close-button {
-  width: 60px;
-  padding: 0;
-  background-color: white;
+#dropdown-menu :first-child {
+  justify-content: end;
 }
 
 #dropdown-container {

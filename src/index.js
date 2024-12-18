@@ -1,4 +1,5 @@
 import "./styles.css";
+import countdown from "./countdown";
 
 const dropdownContainer = document.getElementById("dropdown-container");
 const menuButton = document.getElementById("menu-button");
