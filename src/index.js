@@ -1,5 +1,6 @@
 import "./styles.css";
-import countdown from "./countdown";
+import countdown from "./modules/countdown";
+import noDoubleTap from "./modules/noDoubleTap";
 
 const dropdownContainer = document.getElementById("dropdown-container");
 const menuButton = document.getElementById("menu-button");
@@ -17,3 +18,5 @@ window.addEventListener("click", (e) => {
     dropdownMenu.classList.remove("visible"); 
   }
 });
+
+noDoubleTap()
