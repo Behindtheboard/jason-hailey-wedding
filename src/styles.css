@@ -314,11 +314,19 @@ ul#dropdown-menu li {
   width: 100vw;
 }
 
+video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #saveTheDate {
   font-size: 3rem;
   text-align: center;
   color: white;
   font-family: "Alex Brush", serif;
   position: relative;
+  z-index: 7;
   transform: translateY(500%);
 }
