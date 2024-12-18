@@ -22,7 +22,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  /* font-family: monospace, monospace; 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -44,7 +44,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  /* font-family: monospace, monospace; 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -165,11 +165,36 @@ ul {
 }
 
 /* CUSTOM */
+@font-face {
+  font-family: "Alex Brush", serif;
+  src: url("font/AlexBrush-Regular.ttf") format("truetype");
+  src: url("font/AlexBrush-Regular.woff") format("woff");
+  src: url("font/AlexBrush-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
+  --backgound-color-scheme: #4b3f29bf;
+  --menu-color-scheme: #19140fde;
+  --dropdown-color-scheme: #b1a281;
+  --opaque-background: rgba(255, 255, 255, 0);
+
   position: relative;
+  /* font-family: "Alex Brush", serif; */
   z-index: 1;
   flex-direction: column;
-  background-color: green;
+  background-color: #4b3f29;
+  color: white;
+}
+
+#container {
+  background-image: url("img/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: calc(100% * (image-height / image-width));
 }
 
 body,
@@ -188,21 +213,28 @@ div {
   touch-action: manipulation;
 }
 
+/* header */
+
 header {
+  font-family: inherit;
   justify-content: space-between;
-  height: 60px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 25px;
-  background-color: green;
+  background-color: var(--backgound-color-scheme);
+
 }
 
 #title {
   flex-direction: column;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: white;
+
+  font-family: "Alex Brush", serif;
+
 }
 
 #countdown {
@@ -221,16 +253,17 @@ header {
 }
 
 #menu-button {
-  background-color: green;
-  width: 60px;
+  width: 50px;
   align-items: center;
+  background-color: var(--opaque-background);
+  
 }
 
 img#menu-close-button {
+  width: 50px;
   padding-right: 25px;
   padding-top: 10px;
-  width: 60px;
-  background-color: white;
+  background-color: var(--opaque-background);
 }
 
 #dropdown-menu :first-child {
@@ -239,15 +272,15 @@ img#menu-close-button {
 
 #dropdown-container {
   text-align: center;
-  color: white;
   cursor: pointer;
 }
 
 #dropdown-menu {
   padding: 0;
   margin: 0;
-  background-color: white;
-  width: 67vw;
+  background-color: var(--dropdown-color-scheme);
+  color: #19140fde;
+  width: 60vw;
   height: 100vh;
   top: 0;
   right: 0;
@@ -255,25 +288,38 @@ img#menu-close-button {
   opacity: 0;
   z-index: 10;
   position: absolute;
-  transform: translateX(100%);
-  transition: opacity 0.3s ease-in-out, transform .3s ease-in-out;
+  /* transform: translateX(100%); */
+  transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
 
 ul#dropdown-menu li:hover,
 ul#dropdown-menu li:focus {
-  background-color: lightgreen;
+  text-decoration: underline;
 }
 
 ul#dropdown-menu li {
-  color: black;
-  font-size: 2rem;
+  font-size: 1rem;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: "Bad Script";
 }
 
 #dropdown-menu.visible {
   opacity: 1;
-  transform: translateX(0);
+  /* transform: translateX(0); */
   pointer-events: auto;
+}
+
+/* main */
+
+#video {
+  width: 100vw;
+  text-align: center;
+}
+
+#saveTheDate {
+  font-size: 2rem;
+  color: white;
+  font-family: "Alex Brush", serif;
 }
