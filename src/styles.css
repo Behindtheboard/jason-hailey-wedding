@@ -330,3 +330,17 @@ video {
   z-index: 7;
   transform: translateY(500%);
 }
+
+@media screen and (min-width: 501px) {
+  #saveTheDate {
+    font-size: 4.5rem;
+    transform: translateY(350%);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #saveTheDate {
+    font-size: 6rem;
+    transform: translateY(250%);
+  }
+}
