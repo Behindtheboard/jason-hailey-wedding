@@ -303,8 +303,13 @@ main {
 #video-container {
   position: relative;
   z-index: 1;
-  width: max-content;
-  height: max-content;
+  width: fit-content;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 #saveTheDate {
@@ -329,7 +334,6 @@ main {
   text-align: center;
   font-size: 1.25rem;
 }
-
 
 /* Media Queries */
 
