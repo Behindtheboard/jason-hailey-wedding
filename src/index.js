@@ -19,4 +19,5 @@ window.addEventListener("click", (e) => {
   }
 });
 
+countdown()
 noDoubleTap()
