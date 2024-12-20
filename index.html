@@ -27,17 +27,15 @@
             </div>
         </header>
         <main>
-            <div id="video">
-                <video autoplay loop >
-                    <source media="(min-width:1101px)"src="750260388d177457dd53.mp4" type="video/mp4">
-                </video>
-                <video controls width="250px" loop playsinline muted >
+            <div id="video-container">
+                <video preload autoplay loop playsinline muted>
                     <source media="(max-width:1100px)"src="2b331b8dd3a01b48abaf.mp4" type="video/mp4">
-                </video>
-                <div id="saveTheDate">May 26th, 2025</div>
-            </div>
+                    <source media="(min-width:1101px)"src="aa46b72f7276a9a87f8c.mp4" type="video/mp4">
+                </div>
+            <div id="saveTheDate">May 26th, 2025</div>
             <div id="countdown">
-
+                <div id="counter"></div>
+                
             </div>
         </main>
     </div>
