@@ -302,7 +302,7 @@ main {
 
 #video-container {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   width: max-content;
   height: max-content;
 }
@@ -315,7 +315,7 @@ main {
   font-family: "Alex Brush", serif;
   position: absolute;
   transform: translateX(500%);
-  z-index: 10;
+  z-index: 2;
   transform: translateY(500%);
 }
 
