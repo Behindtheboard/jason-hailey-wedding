@@ -10,10 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bad+Script&display=swap" rel="stylesheet">
 <script defer src="main.js"></script></head>
 <body>
-
     <div id="container">
         <header>
-            <div id="title">Jason + Hailey</div>
+            <div id="title">Hailey + Jason</div>
             <div id="dropdown-container">
                 <img id="menu-button" src="a61945f6bb2c4a95e677.svg"></img>
                 <ul id="dropdown-menu">
@@ -29,10 +28,16 @@
         </header>
         <main>
             <div id="video">
-                <video autoplay loop playsinline >
-                    <source src="2b331b8dd3a01b48abaf.mp4" type="video/mp4">
+                <video autoplay loop >
+                    <source media="(min-width:1101px)"src="750260388d177457dd53.mp4" type="video/mp4">
+                </video>
+                <video controls width="250px" loop playsinline muted >
+                    <source media="(max-width:1100px)"src="2b331b8dd3a01b48abaf.mp4" type="video/mp4">
                 </video>
                 <div id="saveTheDate">May 26th, 2025</div>
+            </div>
+            <div id="countdown">
+
             </div>
         </main>
     </div>
