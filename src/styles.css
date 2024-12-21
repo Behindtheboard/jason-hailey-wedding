@@ -202,7 +202,7 @@ header,
 main,
 #dropdown-container,
 #title,
-#countdown,
+#countdown-container,
 #dropdown-menu :first-child {
   display: flex;
 }
@@ -237,12 +237,14 @@ header {
 }
 
 #menu-button {
+  position: sticky;
   width: 50px;
   align-items: center;
   background-color: var(--opaque-background);
 }
 
 img#menu-close-button {
+  position: sticky;
   width: 50px;
   padding-right: 25px;
   padding-top: 10px;
@@ -302,7 +304,7 @@ main {
 
 #video-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: fit-content;
 }
 
@@ -320,20 +322,39 @@ video {
   font-family: "Alex Brush", serif;
   position: absolute;
   transform: translateX(500%);
-  z-index: 2;
+  z-index: 3;
   transform: translateY(500%);
 }
 
-#countdown {
-  flex-direction: column;
+/* Countdown */
+
+#countdown-container {
   justify-content: center;
   color: white;
+  width: 100vw;
+  position: absolute;
+  transform: translateY(900%);
+  z-index: 3;
 }
 
-#countdown div {
+#counter div {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
+
+#counter .counter-label {
+  font-size: 1rem;
+}
+
+#counter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(2, auto);  
+  align-items: center;
+  width: 70vw;
+}
+
+
 
 /* Media Queries */
 
