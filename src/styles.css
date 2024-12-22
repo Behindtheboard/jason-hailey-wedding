@@ -22,7 +22,6 @@ hr {
 }
 
 pre {
-  /* font-family: monospace, monospace; 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -44,7 +43,6 @@ strong {
 code,
 kbd,
 samp {
-  /* font-family: monospace, monospace; 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -166,11 +164,11 @@ ul {
 
 /* CUSTOM */
 @font-face {
-  font-family: "Alex Brush", serif;
-  src: url("font/AlexBrush-Regular.ttf") format("truetype");
-  src: url("font/AlexBrush-Regular.woff") format("woff");
-  src: url("font/AlexBrush-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: 'Little Love';
+  src: url('font/LittleLove-Bold.woff2') format('woff2'),
+      url('font/LittleLove-Bold.woff') format('woff'),
+      url('font/LittleLove-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -181,10 +179,10 @@ body {
   --opaque-background: rgba(255, 255, 255, 0);
 
   position: relative;
-  /* font-family: "Alex Brush", serif; */
+  font-family: serif;
   z-index: -1;
   flex-direction: column;
-  background-color: #4b3f29;
+  /* background-color: #4b3f29; */
   color: white;
 }
 
@@ -193,8 +191,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
-  padding-top: calc(100% * (image-height / image-width));
+  background-color: transparent;
 }
 
 body,
@@ -214,6 +211,14 @@ div {
   touch-action: manipulation;
 }
 
+h2 {
+  text-align: center;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /* header */
 
 header {
@@ -230,14 +235,14 @@ header {
 #title {
   flex-direction: column;
   justify-content: center;
-  font-size: 1.25rem;
   color: white;
-
-  font-family: "Alex Brush", serif;
+  font-family: "Little Love";
 }
 
 #menu-button {
   position: sticky;
+  top: 0;
+  right: 0;
   width: 50px;
   align-items: center;
   background-color: var(--opaque-background);
@@ -245,6 +250,8 @@ header {
 
 img#menu-close-button {
   position: sticky;
+  top: 0;
+  right: 0;
   width: 50px;
   padding-right: 25px;
   padding-top: 10px;
@@ -272,7 +279,7 @@ img#menu-close-button {
   text-align: center;
   opacity: 0;
   z-index: 10;
-  position: absolute;
+  position: sticky;
   /* transform: translateX(100%); */
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -314,15 +321,18 @@ video {
   object-fit: cover;
 }
 
-#saveTheDate {
-  font-size: 3rem;
+/* Save the Date */
+
+main #saveTheDate {
+  font-size: 3.5rem;
+  font-weight: bolder;
   text-align: center;
+  font-family: "Little Love";
   width: 100vw;
   color: white;
-  font-family: "Alex Brush", serif;
   position: absolute;
+  z-index: 3; 
   transform: translateX(500%);
-  z-index: 3;
   transform: translateY(500%);
 }
 
@@ -354,6 +364,7 @@ video {
   width: 70vw;
 }
 
+/* Out Story */
 
 
 /* Media Queries */
