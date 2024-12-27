@@ -1,6 +1,6 @@
 export default function countdown() {
   const countdownCtn = document.getElementById("counter");
-  const countDownDate = new Date("May 19, 2025 17:00:00").getTime();
+  const countDownDate = new Date("May 26, 2025 17:00:00").getTime();
 
   for (let i = 0; i < 5; i++) {
     const div = document.createElement("div");
@@ -25,30 +25,48 @@ export default function countdown() {
 
   const x = setInterval(() => {
     const now = new Date().getTime();
-
     const distance = countDownDate - now;
 
-    const totalMonths = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44)); // Average month length in days
-    const days = Math.floor(
-      (distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24)
-    );
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (distance > 0) {
+      // Calculate months using date manipulation
+      const nowDate = new Date();
+      const futureDate = new Date(countDownDate);
 
-    const formatTwoDigits = (num) => (num < 10 ? "0" + num : num);
+      const totalMonths =
+        futureDate.getFullYear() * 12 +
+        futureDate.getMonth() -
+        (nowDate.getFullYear() * 12 + nowDate.getMonth());
 
-    countDownUI[0].innerHTML = formatTwoDigits(totalMonths);
-    countDownUI[1].innerHTML = formatTwoDigits(days);
-    countDownUI[2].innerHTML = formatTwoDigits(hours);
-    countDownUI[3].innerHTML = formatTwoDigits(minutes);
-    countDownUI[4].innerHTML = formatTwoDigits(seconds);
+      const days = Math.floor(
+        (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+      );
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (distance < 0) {
+      const formatTwoDigits = (num) => (num < 10 ? "0" + num : num);
+
+      // Update countdown UI
+      countDownUI[0].innerHTML = formatTwoDigits(totalMonths);
+      countDownUI[1].innerHTML = formatTwoDigits(days);
+      countDownUI[2].innerHTML = formatTwoDigits(hours);
+      countDownUI[3].innerHTML = formatTwoDigits(minutes);
+      countDownUI[4].innerHTML = formatTwoDigits(seconds);
+    } else {
+      // Countdown finished
       clearInterval(x);
-      countDownUI.innerHTML = "Today's the day!";
+
+      // Reset counters and display a message
+      for (let i = 0; i < countDownUI.length; i++) {
+        countDownUI[i].innerHTML = "00";
+      }
+
+      const messageElement = document.getElementById("countdown-message");
+      if (messageElement) {
+        messageElement.innerHTML = "Today's the day!";
+      }
     }
   }, 1000);
 }
