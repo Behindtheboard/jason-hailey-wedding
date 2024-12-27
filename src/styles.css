@@ -240,11 +240,15 @@ header {
   font-family: var(--fancy-font);
   justify-content: space-between;
   height: 50px;
+  width: 100vw;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 25px;
-  background-color: var(--backgound-color-scheme);
+  background-color: var(--opaque-background);
+  position: fixed;
+  z-index: 5;
+  top: 0;
 }
 
 /* Title */
