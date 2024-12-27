@@ -164,34 +164,33 @@ ul {
 
 /* CUSTOM */
 @font-face {
-  font-family: 'Little Love';
-  src: url('font/LittleLove-Bold.woff2') format('woff2'),
-      url('font/LittleLove-Bold.woff') format('woff'),
-      url('font/LittleLove-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: "ClashGrotesk-Extralight";
+  src: url("font/ClashGrotesk-Extralight.otf") format("opentype");
+  font-weight: normal;
   font-style: normal;
 }
 
 body {
+  /* --fancy-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  --fancy-font: "ClashGrotesk-Extralight";
   --backgound-color-scheme: #4b3f29bf;
   --menu-color-scheme: #19140fde;
   --dropdown-color-scheme: #b1a281;
   --opaque-background: rgba(255, 255, 255, 0);
 
-  position: relative;
-  font-family: serif;
-  z-index: -1;
+  font-family: var(--fancy-font);
+  font-weight: 100;
   flex-direction: column;
-  /* background-color: #4b3f29; */
   color: white;
 }
 
 #container {
-  background-image: url("img/back.jpg");
+  /* background-image: url("img/back.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: transparent;
+  background-color: var(--backgound-color-scheme);
 }
 
 body,
@@ -213,6 +212,9 @@ div {
 
 h2 {
   text-align: center;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: 1.25rem;
 }
 
 .section {
@@ -222,7 +224,7 @@ h2 {
 /* header */
 
 header {
-  font-family: inherit;
+  font-family: var(--fancy-font);
   justify-content: space-between;
   height: 50px;
   padding-top: 10px;
@@ -232,24 +234,32 @@ header {
   background-color: var(--backgound-color-scheme);
 }
 
+/* Title */
+
 #title {
   flex-direction: column;
   justify-content: center;
   color: white;
-  font-family: "Little Love";
+  font-family: var(--fancy-font);
 }
 
+/* Menu */
+
 #menu-button {
-  position: sticky;
+  align-items: center;
+  position: fixed;
+  z-index: 9;
   top: 0;
   right: 0;
   width: 50px;
-  align-items: center;
+  padding-right: 25px;
+  padding-top: 10px;
   background-color: var(--opaque-background);
 }
 
 img#menu-close-button {
-  position: sticky;
+  position: fixed;
+  z-index: 9;
   top: 0;
   right: 0;
   width: 50px;
@@ -279,7 +289,7 @@ img#menu-close-button {
   text-align: center;
   opacity: 0;
   z-index: 10;
-  position: sticky;
+  position: fixed;
   /* transform: translateX(100%); */
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -294,7 +304,7 @@ ul#dropdown-menu li {
   font-size: 1rem;
   padding-top: 30px;
   padding-bottom: 30px;
-  font-family: "Bad Script";
+  font-family: var(--fancy-font);
 }
 
 #dropdown-menu.visible {
@@ -324,16 +334,16 @@ video {
 /* Save the Date */
 
 main #saveTheDate {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: bolder;
   text-align: center;
-  font-family: "Little Love";
+  font-family: var(--fancy-font);
   width: 100vw;
   color: white;
   position: absolute;
-  z-index: 3; 
+  z-index: 3;
   transform: translateX(500%);
-  transform: translateY(500%);
+  transform: translateY(300%);
 }
 
 /* Countdown */
@@ -343,8 +353,8 @@ main #saveTheDate {
   color: white;
   width: 100vw;
   position: absolute;
-  transform: translateY(900%);
-  z-index: 3;
+  transform: translateY(500%);
+  z-index: 4;
 }
 
 #counter div {
@@ -353,19 +363,18 @@ main #saveTheDate {
 }
 
 #counter .counter-label {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 #counter {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  grid-template-rows: repeat(2, auto);  
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
   align-items: center;
   width: 70vw;
 }
 
 /* Out Story */
-
 
 /* Media Queries */
 

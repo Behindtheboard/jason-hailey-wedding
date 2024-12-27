@@ -17,11 +17,11 @@ export default function countdown() {
   const countDownUI = document.querySelectorAll(".counter");
   const counterLabel = document.querySelectorAll(".counter-label");
 
-  counterLabel[0].innerHTML = "Monthes";
-  counterLabel[1].innerHTML = "Days";
-  counterLabel[2].innerHTML = "Hours";
-  counterLabel[3].innerHTML = "Minutes";
-  counterLabel[4].innerHTML = "Seconds";
+  counterLabel[0].innerHTML = "months";
+  counterLabel[1].innerHTML = "days";
+  counterLabel[2].innerHTML = "hours";
+  counterLabel[3].innerHTML = "minutes";
+  counterLabel[4].innerHTML = "seconds";
 
   const x = setInterval(() => {
     const now = new Date().getTime();
