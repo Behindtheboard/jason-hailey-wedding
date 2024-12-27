@@ -21,11 +21,13 @@
                     <li>Registry</li>
                     <li>RSVP</li>
                 </ul>
+                <button id="unmute" class="visible"></button>
+                <button id="mute"></button>
             </div>
         </header>
         <main>
             <div id="video-container">
-                <video preload autoplay loop playsinline muted>
+                <video preload="auto" muted autoplay loop playsinline >
                     <source media="(max-width:1100px)"src="img/bg-video-small.mp4" type="video/mp4">
                     <source media="(min-width:1101px)"src="img/bg-video-1080.mp4" type="video/mp4">
                 </div>
@@ -50,7 +52,7 @@
                 <p></p>
             </div>
             <div id="rsvp-container" class="section">
-                <button id="RSVP"></button>
+                <button id="rsvp">RSVP</button>
             </div>
         </main>
     </div>

@@ -193,14 +193,27 @@ body {
   background-color: var(--backgound-color-scheme);
 }
 
+/* display flex */
+
 body,
 header,
 main,
 #dropdown-container,
 #title,
 #countdown-container,
-#dropdown-menu :first-child {
+#dropdown-menu :first-child,
+#rsvp-container,
+button#rsvp {
   display: flex;
+}
+
+/* justify center */
+
+#title,
+#countdown-container,
+#rsvp-container,
+button#rsvp {
+  justify-content: center;
 }
 
 [id$="-button"],
@@ -238,9 +251,44 @@ header {
 
 #title {
   flex-direction: column;
-  justify-content: center;
   color: white;
   font-family: var(--fancy-font);
+}
+
+/* Sound button */
+
+#unmute {
+  background-image: url(img/sound-on.png);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 45px;
+  height: 45px;
+  background-color: var(--opaque-background);  
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mute {
+  background-image: url(img/sound-off.png);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 45px;
+  height: 45px;
+  background-color: var(--opaque-background);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#unmute.visible,
+#mute.visible {
+  z-index: 11;
+  opacity: 1;
+  pointer-events: auto;
+  position: fixed;
+  top: 70px;
+  right: 23px;
 }
 
 /* Menu */
@@ -349,7 +397,6 @@ main #saveTheDate {
 /* Countdown */
 
 #countdown-container {
-  justify-content: center;
   color: white;
   width: 100vw;
   position: absolute;
@@ -375,6 +422,16 @@ main #saveTheDate {
 }
 
 /* Out Story */
+
+/* RSVP */
+
+button#rsvp {
+  background-color: var(--dropdown-color-scheme);
+  align-items: center;
+  padding-top: 5px;
+  margin-top: 16.6px;
+  margin-bottom: 16.6px;
+}
 
 /* Media Queries */
 
