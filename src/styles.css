@@ -285,7 +285,7 @@ header {
   pointer-events: auto;
   position: fixed;
   top: 70px;
-  right: 23px;
+  right: 20px;
 }
 
 #unmute.visible {
@@ -311,22 +311,15 @@ header {
 
 #menu-button {
   align-items: center;
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  right: 0;
-  width: 50px;
-  padding-right: 25px;
-  padding-top: 10px;
-  background-color: var(--opaque-background);
 }
 
+#menu-button,
 img#menu-close-button {
   position: fixed;
   z-index: 9;
   top: 0;
   right: 0;
-  width: 50px;
+  width: 42px;
   padding-right: 25px;
   padding-top: 10px;
   background-color: var(--opaque-background);
