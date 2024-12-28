@@ -338,12 +338,11 @@ img#menu-close-button {
   padding: 0;
   margin: 0;
   background-color: var(--dropdown-color-scheme);
-  color: #19140fde;
   width: 60vw;
   height: 100vh;
   top: 0;
   right: 0;
-  text-align: center;
+  text-align: start;
   opacity: 0;
   z-index: 10;
   position: fixed;
@@ -361,6 +360,7 @@ ul#dropdown-menu li {
   font-size: 1rem;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 20px;
   font-family: var(--fancy-font);
 }
 
@@ -437,7 +437,6 @@ main #saveTheDate {
 button#rsvp {
   background-color: var(--dropdown-color-scheme);
   align-items: center;
-  padding-top: 5px;
   margin-top: 16.6px;
   margin-bottom: 16.6px;
 }
