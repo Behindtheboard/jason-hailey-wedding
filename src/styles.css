@@ -443,16 +443,34 @@ button#rsvp {
 
 /* Media Queries */
 
+/* iPad */
+
 @media screen and (min-width: 501px) {
-  #saveTheDate {
-    font-size: 4.5rem;
-    transform: translateY(350%);
+  #title {
+    font-size: 1.5rem;
   }
+
+  div#saveTheDate {
+    font-size: 4.5rem;
+    transform: translateY(100%);
+  }
+
+  div#countdown-container {
+    transform: translateY(2000%);
+  }
+
 }
 
-@media screen and (min-width: 1100px) {
-  #saveTheDate {
+/* Computer */
+
+@media screen and (min-width: 1101px) {
+  
+  div#saveTheDate {
     font-size: 6rem;
-    transform: translateY(250%);
+    transform: translateY(50%);
+  }
+
+  div#countdown-container {
+    transform: translateY(2000%);
   }
 }
