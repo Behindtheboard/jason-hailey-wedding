@@ -195,7 +195,8 @@ main,
 #countdown-container,
 #dropdown-menu :first-child,
 #rsvp-container,
-button#rsvp {
+button#rsvp,
+.section {
   display: flex;
 }
 
@@ -220,10 +221,6 @@ h2 {
   font-family: inherit;
   font-weight: 100;
   font-size: 1.25rem;
-}
-
-.section {
-  background-color: rgba(0, 0, 0, 0);
 }
 
 /* header */
@@ -536,7 +533,25 @@ main #saveTheDate {
   width: 70vw;
 }
 
-/* Out Story */
+/* sections */
+
+.section {
+  background-color: rgba(0, 0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+}
+
+.section p {
+  max-width: 70vw;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+}
+
+/* Our Story */
+
+/* Registry */
 
 /* RSVP */
 
