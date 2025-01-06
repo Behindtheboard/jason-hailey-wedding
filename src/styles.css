@@ -162,6 +162,16 @@ ul {
 }
 
 /* CUSTOM */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "ClashGrotesk-Extralight";
   src: url("font/ClashGrotesk-Extralight.otf") format("opentype");
@@ -193,9 +203,9 @@ main,
 #dropdown-container,
 #title,
 #countdown-container,
-#dropdown-menu :first-child,
 #rsvp-container,
-button#rsvp,
+button#rsvp, 
+li a,
 .section {
   display: flex;
 }
@@ -317,15 +327,15 @@ input[type="range"] {
   background: transparent;
   opacity: 0;
   pointer-events: none;
-  padding: 10px 0; 
+  padding: 10px 0;
 }
 
 input[type="range"]:focus {
   outline: none;
 }
 
-input[type=range]::after {
-  content: '';
+input[type="range"]::after {
+  content: "";
   position: absolute;
   top: -10px; /* Expands hitbox upward */
   bottom: -10px; /* Expands hitbox downward */
@@ -426,10 +436,6 @@ img#menu-close-button {
   background-color: var(--opaque-background);
 }
 
-#dropdown-menu :first-child {
-  justify-content: end;
-}
-
 #dropdown-container {
   text-align: center;
   cursor: pointer;
@@ -452,17 +458,18 @@ img#menu-close-button {
   pointer-events: none;
 }
 
-ul#dropdown-menu li:hover,
-ul#dropdown-menu li:focus {
-  text-decoration: underline;
-}
-
-ul#dropdown-menu li {
+li a {
   font-size: 1rem;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 20px;
+  padding-right: 20px;
   font-family: var(--fancy-font);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 #dropdown-menu.visible {
