@@ -567,7 +567,7 @@ button#rsvp {
   align-items: center;
   font-size: 1.5rem;
   color: white;
-  padding: .5px 40px;
+  padding: 0.5px 40px;
   margin-top: 16.6px;
   margin-bottom: 16.6px;
 }
@@ -593,6 +593,7 @@ button#rsvp {
 }
 
 #rsvp-form input[type="text"],
+#rsvp-form input[type="email"],
 #rsvp-form select {
   padding: 10px;
   border: 0.5px solid white;
@@ -622,8 +623,6 @@ button#rsvp {
   background: url("/src/img/dropdown-arrow.svg") no-repeat right 20px center;
 }
 
-/* Submit button */
-
 #rsvp-form button {
   grid-column: span 2;
   padding: 10px 20px;
@@ -635,10 +634,6 @@ button#rsvp {
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-}
-
-#rsvp-form button:hover {
-  background-color: #0056b3;
 }
 
 /* Media Queries */

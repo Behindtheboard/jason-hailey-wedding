@@ -8,13 +8,16 @@ export default function rsvp() {
     () => {
       para.remove();
 
+      // Check if the form already exists to prevent duplication
+      if (document.getElementById("rsvp-form")) return;
+
       const form = document.createElement("form");
       form.id = "rsvp-form";
 
       // Create Name field
       const nameLabel = document.createElement("label");
       nameLabel.setAttribute("for", "name");
-      nameLabel.textContent = "first and last Name";
+      nameLabel.textContent = "first and last name";
       const nameInput = document.createElement("input");
       nameInput.type = "text";
       nameInput.id = "name";
@@ -31,7 +34,7 @@ export default function rsvp() {
       const yesRadio = document.createElement("input");
       yesRadio.type = "radio";
       yesRadio.id = "yes";
-      yesRadio.name = "plusOne";
+      yesRadio.name = "attending";
       yesRadio.value = "yes";
       yesRadio.required = true;
       yesLabel.appendChild(yesRadio);
@@ -42,7 +45,7 @@ export default function rsvp() {
       const noRadio = document.createElement("input");
       noRadio.type = "radio";
       noRadio.id = "no";
-      noRadio.name = "plusOne";
+      noRadio.name = "attending";
       noRadio.value = "no";
       noLabel.appendChild(noRadio);
 
@@ -69,7 +72,7 @@ export default function rsvp() {
       mealSelect.appendChild(vegetarianOption);
       mealSelect.appendChild(veganOption);
 
-      // Create Phone Number field
+      // Create Phone Number input
       const phoneLabel = document.createElement("label");
       phoneLabel.setAttribute("for", "phone");
       phoneLabel.textContent = "phone number";
@@ -77,7 +80,16 @@ export default function rsvp() {
       phoneInput.type = "text";
       phoneInput.id = "phone";
       phoneInput.name = "phone";
-      phoneInput.required = true;
+
+      // Create Email field
+      const emailLabel = document.createElement("label");
+      emailLabel.setAttribute("for", "email");
+      emailLabel.textContent = "email address";
+      const emailInput = document.createElement("input");
+      emailInput.type = "email";
+      emailInput.id = "email";
+      emailInput.name = "email";
+      emailInput.required = true;
 
       // Create Submit button
       const submitButton = document.createElement("button");
@@ -94,6 +106,8 @@ export default function rsvp() {
       form.appendChild(mealSelect);
       form.appendChild(phoneLabel);
       form.appendChild(phoneInput);
+      form.appendChild(emailLabel);
+      form.appendChild(emailInput);
       form.appendChild(submitButton);
 
       // Append the form to the body or a specific container
@@ -108,27 +122,45 @@ export default function rsvp() {
 
         // Collect form data
         const formData = new FormData(form);
+        // Validate email address
+        const email = formData.get("email");
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Collect form data
         const data = {
           name: formData.get("name"),
           attending: formData.get("attending"),
-          meal: formData.get("diet"),
+          diet: formData.get("diet"),
           phone: formData.get("phone"),
+          email,
         };
 
         console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
 
         // Send form data to your server (Google Sheets, SMS, etc.)
-        fetch("YOUR_WEB_APP_URL", {
+        fetch("https://script.google.com/macros/s/AKfycbxTD-AWaQIMJATtK_OLe6szJUG5d35ZiG4AY53L1AdOUoEzQKsn0T5KD6gVtKMYRKXD0g/exec", {
           method: "POST",
-          body: formData,
+          body: new URLSearchParams(data)
         })
-          .then((response) => response.text())
-          .then((data) => {
-            alert("RSVP submitted successfully!");
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.result === "success") {
+              form.remove();
+              const submitted = document.createElement("p");
+              submitted.textContent = "success! see you soon!";
+              formCtn.appendChild(submitted);
+            }
           })
           .catch((error) => {
             console.error(error);
-            alert("There was an error submitting your RSVP.");
+            alert(
+              "There was an error submitting your rsvp. Call me if this happens!"
+            );
           });
       });
     },
