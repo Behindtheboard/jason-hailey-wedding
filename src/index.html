@@ -1,83 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hailey + Jason</title>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <div id="title">Hailey + Jason</div>
-        <div id="dropdown-container">
-          <img id="menu-button" src="./img/menu.png" />
-          <ul id="dropdown-menu">
-            <div><img id="menu-close-button" src="./img/menu-close.png" /></div>
-            <li><a href="" id="home">home</a></li>
-            <li><a href="#our-story-container">our story</a></li>
-            <li><a href="#details-container">details</a></li>
-            <li><a href="#accomodations-container">accomodations</a></li>
-            <li><a href="#registry-container">registry</a></li>
-            <li><a href="#rsvp-container">rsvp</a></li>
-          </ul>
-          <button id="unmute" class="visible"></button>
-          <button id="mute"></button>
-          <input
-            type="range"
-            id="volume-control"
-            min="0"
-            max="1"
-            step="0.01"
-            value="1"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hailey + Jason</title>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="title">Hailey + Jason</div>
+      <div id="dropdown-container">
+        <img id="menu-button" src="./img/menu.png" />
+        <ul id="dropdown-menu">
+          <div><img id="menu-close-button" src="./img/menu-close.png" /></div>
+          <li><a href="" id="home">home</a></li>
+          <li><a href="#our-story-container">our story</a></li>
+          <li><a href="#details-container">details</a></li>
+          <li><a href="#accomodations-container">accomodations</a></li>
+          <li><a href="#registry-container">registry</a></li>
+          <li><a href="#rsvp-container">rsvp</a></li>
+        </ul>
+        <button id="unmute" class="visible"></button>
+        <button id="mute"></button>
+        <input
+          type="range"
+          id="volume-control"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+    </header>
+    <main>
+      <div id="video-container">
+        <video preload="auto" muted autoplay loop playsinline>
+          <source
+            media="(max-width:500px)"
+            src="img/bg-video-small.mp4"
+            type="video/mp4"
           />
-        </div>
-      </header>
-      <main>
-        <div id="video-container">
-          <video preload="auto" muted autoplay loop playsinline>
-            <source
-              media="(max-width:500px)"
-              src="img/bg-video-small.mp4"
-              type="video/mp4"
-            />
-            <source
-              media="(min-width:501px)"
-              src="img/bg-video-1080.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-        <div id="saveTheDate">may 26 2025</div>
-        <div id="countdown-container">
-          <div id="counter"></div>
-        </div>
-        <div id="our-story-container" class="section">
-          <h2>our story</h2>
-          <p></p>
-        </div>
-        <div id="details-container" class="section">
-          <h2>location</h2>
-          <p>Malibu, CA</p>
-        </div>
-        <div id="accomodations-container" class="section">
-          <h2>accomodations</h2>
-          <p>comming soon</p>
-        </div>
-        <div id="registry-container" class="section">
-          <h2>registry</h2>
-          <p>
-            We're just happy you're joining us! <br />
-            But if you insist, venmo or zelle would be amazing! <br />
-            <br />
-            Venmo: @kjason <br />
-            Zelle: 404-232-9562
-          </p>
-        </div>
-        <div id="rsvp-container" class="section">
-          <button id="rsvp">rsvp</button>
-          <p>rsvp to get address!</p>
-        </div>
-      </main>
-    </div>
-  </body>
-</html>
+          <source
+            media="(min-width:501px)"
+            src="img/bg-video-1080.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div id="saveTheDate">may 26 2025</div>
+      <div id="countdown-container">
+        <div id="counter"></div>
+      </div>
+      <div id="our-story-container" class="section">
+        <h2>our story</h2>
+        <p></p>
+      </div>
+      <div id="details-container" class="section">
+        <h2>location</h2>
+        <p>Malibu, CA</p>
+      </div>
+      <div id="accomodations-container" class="section">
+        <h2>accomodations</h2>
+        <p>Coming soon...</p>
+      </div>
+      <div id="registry-container" class="section">
+        <h2>registry</h2>
+        <p>
+          We're just happy you're joining us! <br />
+          <br />
+          But if you insist, venmo or zelle would be amazing! <br />
+          <br />
+          Venmo: @kjason <br />
+          Zelle: 404-232-9562
+        </p>
+      </div>
+      <div id="rsvp-container" class="section">
+        <button id="rsvp">rsvp</button>
+        <div id="rsvp-form-container"></div>
+        <p id="address">Address will be sent to you after you RSVP!</p>
+      </div>
+    </main>
+  </div>
+</body>

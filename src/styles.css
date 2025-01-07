@@ -204,7 +204,7 @@ main,
 #title,
 #countdown-container,
 #rsvp-container,
-button#rsvp, 
+button#rsvp,
 li a,
 .section {
   display: flex;
@@ -560,13 +560,85 @@ main #saveTheDate {
 
 /* Registry */
 
-/* RSVP */
+/* RSVP button */
 
 button#rsvp {
   background-color: var(--dropdown-color-scheme);
   align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  padding: .5px 40px;
   margin-top: 16.6px;
   margin-bottom: 16.6px;
+}
+
+/* rsvp form */
+
+#rsvp-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+  width: 60vw;
+  padding: 20px;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#rsvp-form label,
+#rsvp-form select,
+#rsvp-form input {
+  grid-column: span 2;
+  align-self: center;
+}
+
+#rsvp-form input[type="text"],
+#rsvp-form select {
+  padding: 10px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+#rsvp-form label[for="yes"],
+#rsvp-form label[for="no"] {
+  grid-column: 1 span 2;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rsvp-form input[type="radio"] {
+  margin-left: 20px;
+}
+
+#rsvp-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/src/img/dropdown-arrow.svg") no-repeat right 20px center;
+}
+
+/* Submit button */
+
+#rsvp-form button {
+  grid-column: span 2;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.5px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#rsvp-form button:hover {
+  background-color: #0056b3;
 }
 
 /* Media Queries */
