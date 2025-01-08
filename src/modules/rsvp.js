@@ -151,7 +151,12 @@ export default function rsvp() {
           },
           body: JSON.stringify(data),
         })
-          .then((response) => response.json())
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
           .then((data) => {
             if (data.success) {
               form.remove();

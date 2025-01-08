@@ -1,13 +1,14 @@
 const express = require("express");
 const axios = require("axios");
-const cors = require("cors"); // Import CORS middleware
+const cors = require("cors");
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Configure CORS options
 const corsOptions = {
-  origin: ["https://haileyandjason.com"], // Add all allowed origins
-  methods: ['GET', 'POST', 'OPTIONS'],
+  origin: ["https://haileyandjason.com"], // Update with your actual allowed origin(s)
+  methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 };
 
@@ -42,22 +43,28 @@ app.post("/submit-rsvp", async (req, res) => {
       },
     });
 
-    if (response.data.success) {
-      res.json({
-        success: true,
-        message: response.data.message,
-        googleResponse: response.data,
-      });
-    } else {
-      throw new Error(response.data.message || "Google Apps Script error");
-    }
+    // Log the response for debugging
+    console.log("Google Apps Script response:", response.data);
+
+    // Return the success message
+    res.json({
+      success: true,
+      message: response.data.message || "RSVP submitted successfully!",
+      googleResponse: response.data,
+    });
   } catch (error) {
     console.error("Error submitting RSVP:", error.message);
+
+    // Log error details for debugging
+    if (error.response) {
+      console.error("Error response from Google Apps Script:", error.response.data);
+    }
+
     res.status(500).json({ success: false, message: "Error submitting RSVP" });
   }
 });
 
 // Start the server
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running at http://localhost:${port}`);
 });
