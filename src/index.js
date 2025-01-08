@@ -12,7 +12,7 @@ import rsvp from "./modules/rsvp";
 home();
 dropdown();
 sound()
+volumeControl()
 noDoubleTap();
 countdown();
-volumeControl()
 rsvp()
