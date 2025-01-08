@@ -5,7 +5,7 @@ const app = express();
 
 
 // Use the Heroku-provided port or a default port for local development
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 
 // Configure CORS options
@@ -61,7 +61,7 @@ app.post("/submit-rsvp", async (req, res) => {
   }
 });
 
-
+console.log('Starting server...');
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
