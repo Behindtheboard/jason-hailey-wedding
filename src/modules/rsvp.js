@@ -143,13 +143,17 @@ export default function rsvp() {
         console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
 
         // Send form data to your server (Google Sheets, SMS, etc.)
-        fetch("https://script.google.com/macros/s/AKfycbxTD-AWaQIMJATtK_OLe6szJUG5d35ZiG4AY53L1AdOUoEzQKsn0T5KD6gVtKMYRKXD0g/exec", {
+        const serverUrl = "https://1d6a-104-174-118-51.ngrok-free.app/submit-rsvp";
+        fetch(serverUrl, {
           method: "POST",
-          body: new URLSearchParams(data)
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         })
           .then((response) => response.json())
-          .then((result) => {
-            if (result.result === "success") {
+          .then((data) => {
+            if (data.success) {
               form.remove();
               const submitted = document.createElement("p");
               submitted.textContent = "success! see you soon!";
