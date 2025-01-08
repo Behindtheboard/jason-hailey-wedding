@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors"); // Import CORS middleware
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 // Configure CORS options
 const corsOptions = {
   origin: [
@@ -16,6 +16,9 @@ const corsOptions = {
 };
 // Use CORS middleware with options
 app.use(cors(corsOptions));
+
+app.options("*", cors()); // Handle preflight requests
+
 // Middleware for parsing JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
