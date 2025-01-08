@@ -1,8 +1,13 @@
 const express = require("express");
 const axios = require("axios");
-const cors = require("cors"); // Import CORS middleware
+const cors = require("cors");
+
 const app = express();
-const port = 3000;
+
+
+// Use the Heroku-provided port or a default port for local development
+const port = process.env.PORT || 3000;
+
 
 // Configure CORS options
 const corsOptions = {
@@ -57,17 +62,8 @@ app.post("/submit-rsvp", async (req, res) => {
   }
 });
 
-// // Handle preflight (OPTIONS) requests
-// app.options("/submit-rsvp", (req, res) => {
-//   res.set({
-//     "Access-Control-Allow-Origin": "*", // Adjust to match your origin(s)
-//     "Access-Control-Allow-Methods": "POST, OPTIONS",
-//     "Access-Control-Allow-Headers": "Content-Type",
-//   });
-//   res.sendStatus(200);
-// });
 
 // Start the server
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
