@@ -143,7 +143,7 @@ export default function rsvp() {
         console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
 
         // Send form data to your server (Google Sheets, SMS, etc.)
-        const serverUrl = "https://1d6a-104-174-118-51.ngrok-free.app/submit-rsvp";
+        const serverUrl = "https://haileyandjason.com/submit-rsvp";
         fetch(serverUrl, {
           method: "POST",
           headers: {

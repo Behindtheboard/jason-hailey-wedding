@@ -6,7 +6,7 @@ const port = 3000;
 
 // Configure CORS options
 const corsOptions = {
-  origin: ["http://localhost:8080", "http://192.168.0.192:8080", "https://your-ngrok-url.ngrok-free.app"], // Add all allowed origins
+  origin: ["https://haileyandjason.com"], // Add all allowed origins
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ["Content-Type"],
 };
