@@ -1,3 +1,4 @@
+// import preload from "./modules/preload";
 import "./styles.css";
 import vidResizing from "./modules/vidResizing";
 import dropdown from "./modules/dropdown";
@@ -8,7 +9,7 @@ import volumeControl from "./modules/volumeControl";
 import home from "./modules/home";
 import rsvp from "./modules/rsvp";
 
-
+// preload();
 home();
 dropdown();
 sound()
