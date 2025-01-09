@@ -2,10 +2,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="14fe5c4c6b11f41e871b.ico" />
   <title>Hailey + Jason</title>
 <script defer src="main.js"></script></head>
 <body>
-  <div id="container">
+  <div id="loading">
+    <p>loading your invitation...</p>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+
+  <div id="container" style="display: block">
     <header>
       <div id="title">Hailey + Jason</div>
       <div id="dropdown-container">
@@ -55,7 +63,7 @@
         <p></p>
       </div>
       <div id="details-container" class="section">
-        <h2>location</h2>
+        <h2>details</h2>
         <p>Malibu, CA</p>
       </div>
       <div id="accomodations-container" class="section">
