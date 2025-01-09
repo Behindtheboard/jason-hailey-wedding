@@ -713,6 +713,14 @@ button#rsvp {
     position: relative;
     transform: translateY(-100px);
   }
+
+  li a {
+    font-size: 1.5rem;
+  }
+
+  #dropdown-menu {
+    width: 250px;
+  }
 }
 
 /* iPad Portrait */
@@ -720,6 +728,14 @@ button#rsvp {
 @media screen and (min-height: 1200px) {
   div#weddingDay {
     transform: translateY(100%);
+  }
+
+  li a {
+    font-size: 1.8rem;
+  }
+
+  div#countdown-container {
+    transform: translateY(-150px);
   }
 }
 
@@ -749,5 +765,17 @@ button#rsvp {
   div#saveTheDate {
     transform: translateY(150%);
     font-size: 1.8rem;
+  }
+
+  div#countdown-container {
+    transform: translateY(-150px);
+  }
+
+  #counter div {
+    font-size: 3rem;
+  }
+  
+  #counter .counter-label {
+    font-size: 1rem;
   }
 }
