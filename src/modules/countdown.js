@@ -4,7 +4,7 @@ export default function countdown() {
 
   for (let i = 0; i < 5; i++) {
     const div = document.createElement("div");
-    div.classList.add("counter");
+    div.classList.add("counter-number");
     countdownCtn.appendChild(div);
   }
 
@@ -14,7 +14,7 @@ export default function countdown() {
     countdownCtn.appendChild(div);
   }
 
-  const countDownUI = document.querySelectorAll(".counter");
+  const countDownUI = document.querySelectorAll(".counter-number");
   const counterLabel = document.querySelectorAll(".counter-label");
 
   counterLabel[0].innerHTML = "months";
