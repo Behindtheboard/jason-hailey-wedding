@@ -604,6 +604,18 @@ main #weddingDay {
 
 /* Registry */
 
+
+/* RSVP */
+#rsvp-container {
+  height: fit-content;
+  padding: 40px;
+  justify-content: start;
+}
+
+#rsvp-container p {
+  margin-top:0px;
+}
+
 /* RSVP button */
 
 button#rsvp {
@@ -612,11 +624,10 @@ button#rsvp {
   font-size: 1.5rem;
   color: white;
   padding: 0.5px 40px;
-  margin-top: 16.6px;
-  margin-bottom: 16.6px;
+  margin-bottom: 30px;
 }
 
-/* rsvp form */
+/* RSVP Form */
 
 #rsvp-form {
   display: grid;
