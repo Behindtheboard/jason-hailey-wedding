@@ -604,7 +604,6 @@ main #weddingDay {
 
 /* Registry */
 
-
 /* RSVP */
 #rsvp-container {
   height: fit-content;
@@ -613,7 +612,7 @@ main #weddingDay {
 }
 
 #rsvp-container p {
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 /* RSVP button */
@@ -705,8 +704,14 @@ button#rsvp {
     transform: translateY(100%);
   }
 
+  div#saveTheDate {
+    transform: translateY(150%);
+    font-size: 2rem;
+  }
+
   div#countdown-container {
-    transform: translateY(2000%);
+    position: relative;
+    transform: translateY(-100px);
   }
 }
 
@@ -715,10 +720,6 @@ button#rsvp {
 @media screen and (min-height: 1200px) {
   div#weddingDay {
     transform: translateY(100%);
-  }
-
-  div#countdown-container {
-    transform: translateY(2950%);
   }
 }
 
@@ -730,10 +731,23 @@ button#rsvp {
     transform: translateY(50%);
   }
 
-  div#countdown-container {
-    transform: translateY(2000%);
+  div#saveTheDate {
+    transform: translateY(100%);
+    font-size: 1.8rem;
   }
+
   #counter {
     max-width: 40vw;
+  }
+}
+
+@media screen and (min-height: 1600px) {
+  div#weddingDay {
+    font-size: 6rem;
+    transform: translateY(100%);
+  }
+  div#saveTheDate {
+    transform: translateY(150%);
+    font-size: 1.8rem;
   }
 }
