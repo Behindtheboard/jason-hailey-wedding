@@ -23,6 +23,14 @@ app.options("*", cors()); // Handle preflight requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Cache control middleware to prevent caching
+app.use((req, res, next) => {
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate"); // Prevent caching
+  res.setHeader("Pragma", "no-cache"); // For HTTP/1.0 compatibility
+  res.setHeader("Expires", "0"); // Set expiration to 0
+  next();
+});
+
 app.use((req, res, next) => {
   if (req.headers["x-forwarded-proto"] !== "https") {
     return res.redirect(`https://${req.headers.host}${req.url}`);
