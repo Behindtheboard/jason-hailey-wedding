@@ -68,6 +68,7 @@ sup {
 
 img {
   border-style: none;
+  box-shadow: none !important;
 }
 
 button,
@@ -521,12 +522,14 @@ main {
   position: relative;
   z-index: 2;
   width: fit-content;
+  box-shadow: none;
 }
 
 video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  box-shadow: none;
 }
 
 /* Save the Date */
@@ -775,7 +778,7 @@ button#rsvp {
   #counter div {
     font-size: 3rem;
   }
-  
+
   #counter .counter-label {
     font-size: 1rem;
   }
