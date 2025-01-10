@@ -1,3 +1,6 @@
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
+  \******************************************************************/
 html {
   line-height: 1.15; /* 1 */
 }
@@ -174,7 +177,7 @@ html {
 
 @font-face {
   font-family: "ClashGrotesk-Extralight";
-  src: url(1abc444d313d452b942f.otf) format("opentype");
+  src: url(/1abc444d313d452b942f.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -291,7 +294,7 @@ header {
 /* Sound button */
 
 #unmute {
-  background-image: url(fbfc4495e2ed12b09f8f.png);
+  background-image: url(/fbfc4495e2ed12b09f8f.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -303,7 +306,7 @@ header {
 }
 
 #mute {
-  background-image: url(cb0707ff23a783d969c9.png);
+  background-image: url(/cb0707ff23a783d969c9.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -521,11 +524,15 @@ main {
   position: relative;
   z-index: 2;
   width: fit-content;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 video {
-  width: 100vw;
-  height: 100vh;
+  display: none; /* Hidden until loaded */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -675,7 +682,7 @@ button#rsvp {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(a2e0e1e3f9576f1d219f.svg) no-repeat right 20px center;
+  background: url(/a2e0e1e3f9576f1d219f.svg) no-repeat right 20px center;
 }
 
 #rsvp-form button {
@@ -781,3 +788,5 @@ button#rsvp {
   }
 }
 
+
+/*# sourceMappingURL=main.91a7c46e2e2223ab4f80.css.map*/
