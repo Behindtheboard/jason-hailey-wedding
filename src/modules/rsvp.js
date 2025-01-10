@@ -181,7 +181,8 @@ export default function rsvp() {
           .then((data) => {
             if (data.success) {
               form.remove();
-              const submitted = document.createElement("p");
+              document.getElementById("rsvp").remove();
+              const submitted = document.createElement("h2");
               submitted.textContent = "success! see you soon!";
               formCtn.appendChild(submitted);
             }

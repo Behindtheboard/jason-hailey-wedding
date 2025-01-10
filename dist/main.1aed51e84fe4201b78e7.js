@@ -433,7 +433,8 @@ function rsvp() {
           .then((data) => {
             if (data.success) {
               form.remove();
-              const submitted = document.createElement("p");
+              document.getElementById("rsvp").remove();
+              const submitted = document.createElement("h2");
               submitted.textContent = "success! see you soon!";
               formCtn.appendChild(submitted);
             }
@@ -680,4 +681,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.ff2768b5d7d45d575a01.js.map
+//# sourceMappingURL=main.1aed51e84fe4201b78e7.js.map
