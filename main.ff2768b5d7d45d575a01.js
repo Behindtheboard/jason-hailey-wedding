@@ -277,29 +277,29 @@ function rsvp() {
       nameInput.required = true;
 
       // Create Attending field (radio buttons)
-      const attendingLabel = document.createElement("label");
-      attendingLabel.setAttribute("for", "attending");
-      attendingLabel.textContent = "bringing plus 1?";
-      const yesLabel = document.createElement("label");
-      yesLabel.setAttribute("for", "yes");
-      yesLabel.textContent = "yes";
-      const yesRadio = document.createElement("input");
-      yesRadio.type = "radio";
-      yesRadio.id = "yes";
-      yesRadio.name = "attending";
-      yesRadio.value = "yes";
-      yesRadio.required = true;
-      yesLabel.appendChild(yesRadio);
+      // const attendingLabel = document.createElement("label");
+      // attendingLabel.setAttribute("for", "attending");
+      // attendingLabel.textContent = "bringing plus 1?";
+      // const yesLabel = document.createElement("label");
+      // yesLabel.setAttribute("for", "yes");
+      // yesLabel.textContent = "yes";
+      // const yesRadio = document.createElement("input");
+      // yesRadio.type = "radio";
+      // yesRadio.id = "yes";
+      // yesRadio.name = "attending";
+      // yesRadio.value = "yes";
+      // yesRadio.required = true;
+      // yesLabel.appendChild(yesRadio);
 
-      const noLabel = document.createElement("label");
-      noLabel.setAttribute("for", "no");
-      noLabel.textContent = "no";
-      const noRadio = document.createElement("input");
-      noRadio.type = "radio";
-      noRadio.id = "no";
-      noRadio.name = "attending";
-      noRadio.value = "no";
-      noLabel.appendChild(noRadio);
+      // const noLabel = document.createElement("label");
+      // noLabel.setAttribute("for", "no");
+      // noLabel.textContent = "no";
+      // const noRadio = document.createElement("input");
+      // noRadio.type = "radio";
+      // noRadio.id = "no";
+      // noRadio.name = "attending";
+      // noRadio.value = "no";
+      // noLabel.appendChild(noRadio);
 
       // Create Dietary Preference field (dropdown)
       const mealLabel = document.createElement("label");
@@ -351,9 +351,9 @@ function rsvp() {
       // Append all elements to the form
       form.appendChild(nameLabel);
       form.appendChild(nameInput);
-      form.appendChild(attendingLabel);
-      form.appendChild(yesLabel);
-      form.appendChild(noLabel);
+      // form.appendChild(attendingLabel);
+      // form.appendChild(yesLabel);
+      // form.appendChild(noLabel);
       form.appendChild(mealLabel);
       form.appendChild(mealSelect);
       form.appendChild(phoneLabel);
@@ -368,9 +368,29 @@ function rsvp() {
       // Scroll to the form
       form.scrollIntoView({ behavior: "smooth", block: "start" });
 
+      // Create loader container
+      const loader = document.createElement("div");
+      loader.classList.add("loader");
+
+      // Create bouncing heart
+      const bouncingHeart = document.createElement("div");
+      bouncingHeart.classList.add("bouncing-heart");
+
+      // Create loader text
+      const loaderText = document.createElement("div");
+      loaderText.classList.add("loader-text");
+      loaderText.textContent = "Submitting form";
+
+      // Append heart and text to loader
+      loader.appendChild(bouncingHeart);
+      loader.appendChild(loaderText);
+
+
       // Handle form submission
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        document.body.appendChild(loader);
 
         // Collect form data
         const formData = new FormData(form);
@@ -395,7 +415,8 @@ function rsvp() {
         console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
 
         // Send form data to your server (Google Sheets, SMS, etc.)
-        const serverUrl = "https://nameless-sea-30482-cb8f6e5a10a5.herokuapp.com/submit-rsvp";
+        const serverUrl =
+          "https://nameless-sea-30482-cb8f6e5a10a5.herokuapp.com/submit-rsvp";
         fetch(serverUrl, {
           method: "POST",
           headers: {
@@ -420,8 +441,14 @@ function rsvp() {
           .catch((error) => {
             console.error(error);
             alert(
-              "There was an error submitting your rsvp. Call me if this happens!"
+              "There was an error submitting your rsvp. Call me if this happens! 404-232-9562"
             );
+          })
+          .finally(() => {
+            // Remove the loader
+            if (document.body.contains(loader)) {
+              document.body.removeChild(loader);
+            }
           });
       });
     },
@@ -653,4 +680,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.38cd4a1a323651c39f0e.js.map
+//# sourceMappingURL=main.ff2768b5d7d45d575a01.js.map
