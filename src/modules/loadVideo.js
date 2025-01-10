@@ -1,5 +1,5 @@
-import smallVideoSrc from "/src/videos/bg-video-16-9.mp4";
-import largeVideoSrc from "/src/videos/bg-video-9-16.mp4";
+import smallVideoSrc from "/src/videos/bg-video-9-16.mp4";
+import largeVideoSrc from "/src/videos/bg-video-16-9.mp4";
 
 export default function loadVideo() {
   async function loadVideo() {
