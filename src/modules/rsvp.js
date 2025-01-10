@@ -116,9 +116,29 @@ export default function rsvp() {
       // Scroll to the form
       form.scrollIntoView({ behavior: "smooth", block: "start" });
 
+      // Create loader container
+      const loader = document.createElement("div");
+      loader.classList.add("loader");
+
+      // Create bouncing heart
+      const bouncingHeart = document.createElement("div");
+      bouncingHeart.classList.add("bouncing-heart");
+
+      // Create loader text
+      const loaderText = document.createElement("div");
+      loaderText.classList.add("loader-text");
+      loaderText.textContent = "Submitting form";
+
+      // Append heart and text to loader
+      loader.appendChild(bouncingHeart);
+      loader.appendChild(loaderText);
+
+
       // Handle form submission
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        document.body.appendChild(loader);
 
         // Collect form data
         const formData = new FormData(form);
@@ -143,7 +163,8 @@ export default function rsvp() {
         console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
 
         // Send form data to your server (Google Sheets, SMS, etc.)
-        const serverUrl = "https://nameless-sea-30482-cb8f6e5a10a5.herokuapp.com/submit-rsvp";
+        const serverUrl =
+          "https://nameless-sea-30482-cb8f6e5a10a5.herokuapp.com/submit-rsvp";
         fetch(serverUrl, {
           method: "POST",
           headers: {
@@ -168,8 +189,14 @@ export default function rsvp() {
           .catch((error) => {
             console.error(error);
             alert(
-              "There was an error submitting your rsvp. Call me if this happens!"
+              "There was an error submitting your rsvp. Call me if this happens! 404-232-9562"
             );
+          })
+          .finally(() => {
+            // Remove the loader
+            if (document.body.contains(loader)) {
+              document.body.removeChild(loader);
+            }
           });
       });
     },
