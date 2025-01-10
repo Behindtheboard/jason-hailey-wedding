@@ -25,29 +25,29 @@ export default function rsvp() {
       nameInput.required = true;
 
       // Create Attending field (radio buttons)
-      const attendingLabel = document.createElement("label");
-      attendingLabel.setAttribute("for", "attending");
-      attendingLabel.textContent = "bringing plus 1?";
-      const yesLabel = document.createElement("label");
-      yesLabel.setAttribute("for", "yes");
-      yesLabel.textContent = "yes";
-      const yesRadio = document.createElement("input");
-      yesRadio.type = "radio";
-      yesRadio.id = "yes";
-      yesRadio.name = "attending";
-      yesRadio.value = "yes";
-      yesRadio.required = true;
-      yesLabel.appendChild(yesRadio);
+      // const attendingLabel = document.createElement("label");
+      // attendingLabel.setAttribute("for", "attending");
+      // attendingLabel.textContent = "bringing plus 1?";
+      // const yesLabel = document.createElement("label");
+      // yesLabel.setAttribute("for", "yes");
+      // yesLabel.textContent = "yes";
+      // const yesRadio = document.createElement("input");
+      // yesRadio.type = "radio";
+      // yesRadio.id = "yes";
+      // yesRadio.name = "attending";
+      // yesRadio.value = "yes";
+      // yesRadio.required = true;
+      // yesLabel.appendChild(yesRadio);
 
-      const noLabel = document.createElement("label");
-      noLabel.setAttribute("for", "no");
-      noLabel.textContent = "no";
-      const noRadio = document.createElement("input");
-      noRadio.type = "radio";
-      noRadio.id = "no";
-      noRadio.name = "attending";
-      noRadio.value = "no";
-      noLabel.appendChild(noRadio);
+      // const noLabel = document.createElement("label");
+      // noLabel.setAttribute("for", "no");
+      // noLabel.textContent = "no";
+      // const noRadio = document.createElement("input");
+      // noRadio.type = "radio";
+      // noRadio.id = "no";
+      // noRadio.name = "attending";
+      // noRadio.value = "no";
+      // noLabel.appendChild(noRadio);
 
       // Create Dietary Preference field (dropdown)
       const mealLabel = document.createElement("label");
@@ -99,9 +99,9 @@ export default function rsvp() {
       // Append all elements to the form
       form.appendChild(nameLabel);
       form.appendChild(nameInput);
-      form.appendChild(attendingLabel);
-      form.appendChild(yesLabel);
-      form.appendChild(noLabel);
+      // form.appendChild(attendingLabel);
+      // form.appendChild(yesLabel);
+      // form.appendChild(noLabel);
       form.appendChild(mealLabel);
       form.appendChild(mealSelect);
       form.appendChild(phoneLabel);
