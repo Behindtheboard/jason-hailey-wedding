@@ -698,6 +698,77 @@ button#rsvp {
   text-align: center;
 }
 
+/* submit loading */
+
+/* Loader container */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Bouncing heart */
+.bouncing-heart {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff; /* Heart color */
+  transform: rotate(-45deg);
+  animation: bounce 1s infinite;
+}
+
+/* Left part of the heart */
+.bouncing-heart::before,
+.bouncing-heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Top left circle */
+.bouncing-heart::before {
+  top: -10px;
+  left: 0;
+}
+
+/* Top right circle */
+.bouncing-heart::after {
+  left: 10px;
+  top: 0;
+}
+
+/* Text below the heart */
+.loader-text {
+  font-family: var(--fancy-font);
+  text-align: end;
+  font-size: 18px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Bounce animation */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(-45deg); /* Adjust height of the bounce */
+  }
+}
+
 /* Media Queries */
 
 /* iPad landscape */
@@ -782,11 +853,11 @@ button#rsvp {
   #counter div {
     font-size: 3rem;
   }
-  
+
   #counter .counter-label {
     font-size: 1rem;
   }
 }
 
 
-/*# sourceMappingURL=main.91a7c46e2e2223ab4f80.css.map*/
+/*# sourceMappingURL=main.3781fe915e0fb8b23bae.css.map*/
