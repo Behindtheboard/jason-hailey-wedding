@@ -160,6 +160,55 @@ function home() {
 
 /***/ }),
 
+/***/ "./src/modules/loadVideo.js":
+/*!**********************************!*\
+  !*** ./src/modules/loadVideo.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ loadVideo)
+/* harmony export */ });
+/* harmony import */ var _src_videos_bg_video_16_9_mp4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/videos/bg-video-16-9.mp4 */ "./src/videos/bg-video-16-9.mp4");
+/* harmony import */ var _src_videos_bg_video_9_16_mp4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/videos/bg-video-9-16.mp4 */ "./src/videos/bg-video-9-16.mp4");
+
+
+
+function loadVideo() {
+  async function loadVideo() {
+    const video = document.getElementById("background-video");
+    const container = document.getElementById("video-container");
+
+    await new Promise((resolve) => {
+      window.onload = resolve;
+    });
+
+    const source = document.createElement("source");
+    source.src =
+      window.innerWidth <= 500
+        ? _src_videos_bg_video_16_9_mp4__WEBPACK_IMPORTED_MODULE_0__
+        : _src_videos_bg_video_9_16_mp4__WEBPACK_IMPORTED_MODULE_1__
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+
+    try {
+      await video.load(); 
+      video.style.display = "block";
+      console.log(`${source.src}`)
+    } catch (error) {
+      console.error("Error loading video:", error);
+      container.innerHTML = "<p>Video failed to load. Refresh</p>";
+    }
+  }
+
+  loadVideo();
+}
+
+
+/***/ }),
+
 /***/ "./src/modules/noDoubleTap.js":
 /*!************************************!*\
   !*** ./src/modules/noDoubleTap.js ***!
@@ -436,100 +485,6 @@ function sound() {
 
 /***/ }),
 
-/***/ "./src/modules/vidLoadTest.js":
-/*!************************************!*\
-  !*** ./src/modules/vidLoadTest.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ vidLoadTest)
-/* harmony export */ });
-/* harmony import */ var _src_videos_bg_video_16_9_mp4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/videos/bg-video-16-9.mp4 */ "./src/videos/bg-video-16-9.mp4");
-/* harmony import */ var _src_videos_bg_video_9_16_mp4__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/videos/bg-video-9-16.mp4 */ "./src/videos/bg-video-9-16.mp4");
-
-
-
-function vidLoadTest() {
-  // const videos = document.querySelectorAll("video");
-  // let loadedVideos = 0;
-
-  // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  // const video = document.querySelector("video");
-
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   if (video.readyState < 3) {
-  //     console.log("Video failed to load, attempting reload...");
-  //     video.load();
-  //   }
-  // });
-
-  // videos.forEach((video, i) => {
-  //   if (video.readyState >= 4) {
-  //     loadedVideos++;
-  //   } else {
-  //     video.addEventListener("canplaythrough", () => {
-  //       loadedVideos++;
-  //       video.play = true;
-  //     });
-  //   }
-  // });
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   const video = document.getElementById("background-video");
-
-  //   const sourceToLoad =
-  //     window.innerWidth <= 500 ? smallVideoSrc : largeVideoSrc;
-
-  //   const source = document.createElement("source");
-  //   source.src = sourceToLoad;
-  //   source.type = "video/mp4";
-  //   video.appendChild(source);
-
-  //   video.load();
-
-  //   video.addEventListener("canplaythrough", () => {
-  //     console.log("Video is ready to play");
-  //   });
-  // });
-
-  async function loadVideo() {
-    const video = document.getElementById("background-video");
-    const container = document.getElementById("video-container");
-
-    // Wait for the page to fully load
-    await new Promise((resolve) => {
-      window.onload = resolve;
-    });
-
-    // Dynamically add the correct video source
-    const source = document.createElement("source");
-    source.src =
-      window.innerWidth <= 500
-        ? _src_videos_bg_video_16_9_mp4__WEBPACK_IMPORTED_MODULE_0__
-        : _src_videos_bg_video_9_16_mp4__WEBPACK_IMPORTED_MODULE_1__
-    source.type = "video/mp4";
-
-    // Add the source to the video and load it
-    video.appendChild(source);
-
-    try {
-      await video.load(); // Explicitly load the video
-      video.style.display = "block"; // Show the video once loaded
-    } catch (error) {
-      console.error("Error loading video:", error);
-      container.innerHTML = "<p>Video failed to load.</p>";
-    }
-  }
-
-  // Call the async function
-  loadVideo();
-}
-
-
-/***/ }),
-
 /***/ "./src/modules/vidResizing.js":
 /*!************************************!*\
   !*** ./src/modules/vidResizing.js ***!
@@ -690,7 +645,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_vidLoadTest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/vidLoadTest */ "./src/modules/vidLoadTest.js");
+/* harmony import */ var _modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loadVideo */ "./src/modules/loadVideo.js");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
 /* harmony import */ var _modules_vidResizing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/vidResizing */ "./src/modules/vidResizing.js");
 /* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown */ "./src/modules/dropdown.js");
@@ -711,7 +666,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_modules_vidLoadTest__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_modules_home__WEBPACK_IMPORTED_MODULE_8__["default"])();
 (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_modules_sound__WEBPACK_IMPORTED_MODULE_6__["default"])()
@@ -719,8 +673,9 @@ __webpack_require__.r(__webpack_exports__);
 ;(0,_modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_5__["default"])();
 (0,_modules_countdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_modules_rsvp__WEBPACK_IMPORTED_MODULE_9__["default"])()
+;(0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.346d2e10dba0febf204d.js.map
+//# sourceMappingURL=main.510123091b4e7f1ad230.js.map
