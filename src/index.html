@@ -3,8 +3,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./img/favicon.ico" />
-  <link rel="preload" href="/src/videos/bg-video-16-9.mp4" as="video" type="video/mp4" media="(max-width: 500px)">
-  <link rel="preload" href="/src/videos/bg-video-9-16.mp4" as="video" type="video/mp4" media="(min-width: 501px)">
   <title>Hailey + Jason</title>
 </head>
 <body>
@@ -36,18 +34,14 @@
     </header>
     <main>
       <div id="video-container">
-        <video preload="metadata" muted autoplay loop playsinline>
-          <source
-            media="(max-width:500px)"
-            src="/src/videos/bg-video-9-16.mp4"
-            type="video/mp4"
-          />
-          <source
-            media="(min-width:501px)"
-            src="/src/videos/bg-video-16-9.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <video
+          id="background-video"
+          preload="metadata"
+          muted
+          autoplay
+          loop
+          playsinline
+        ></video>
       </div>
       <div id="weddingDay">may 26 2025</div>
       <div id="saveTheDate">save the date</div>

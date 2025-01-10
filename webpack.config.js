@@ -4,19 +4,24 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
+    publicPath: "/",
     clean: true,
   },
   devServer: {
     static: "./dist", 
     watchFiles: ["src/**/*"], 
-    hot: true, // Enable Hot Module Replacement (HMR)
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+    hot: true,
     port: 8080,
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -39,6 +44,10 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+      },
+      {
+        test: /\.(mp4|webm|ogg|avi)$/,
+        type: "asset/resource", // For Webpack 5+
       },
     ],
   },

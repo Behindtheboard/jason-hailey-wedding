@@ -1,4 +1,4 @@
-import vidLoadTest from "./modules/vidLoadTest";
+import loadVideo from "./modules/loadVideo";
 import "./styles.css";
 import vidResizing from "./modules/vidResizing";
 import dropdown from "./modules/dropdown";
@@ -9,7 +9,6 @@ import volumeControl from "./modules/volumeControl";
 import home from "./modules/home";
 import rsvp from "./modules/rsvp";
 
-vidLoadTest();
 home();
 dropdown();
 sound()
@@ -17,3 +16,4 @@ volumeControl()
 noDoubleTap();
 countdown();
 rsvp()
+loadVideo();
