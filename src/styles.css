@@ -674,6 +674,10 @@ input:checked + .slider:before {
   transform: translateX(36px);
 }
 
+#our-story-container p {
+  margin: 0px;
+}
+
 /* Registry */
 
 /* RSVP */

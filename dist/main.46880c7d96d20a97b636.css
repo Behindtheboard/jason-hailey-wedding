@@ -677,6 +677,10 @@ input:checked + .slider:before {
   transform: translateX(36px);
 }
 
+#our-story-container p {
+  margin: 0px;
+}
+
 /* Registry */
 
 /* RSVP */
@@ -927,4 +931,4 @@ button#rsvp {
 }
 
 
-/*# sourceMappingURL=main.1b415ddcdd9296a2ebbe.css.map*/
+/*# sourceMappingURL=main.46880c7d96d20a97b636.css.map*/
