@@ -7,12 +7,14 @@ import sound from "./modules/sound";
 import volumeControl from "./modules/volumeControl";
 import home from "./modules/home";
 import rsvp from "./modules/rsvp";
+import ourStory from "./modules/ourStory";
 
+noDoubleTap();
 home();
 dropdown();
 sound()
 volumeControl()
-noDoubleTap();
 countdown();
+ourStory();
 rsvp()
 loadVideo();
