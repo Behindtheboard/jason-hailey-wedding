@@ -685,6 +685,7 @@ input:checked + .slider:before {
 
 #registry-container p {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 /* RSVP */
@@ -935,4 +936,4 @@ button#rsvp {
 }
 
 
-/*# sourceMappingURL=main.7f0885e9594ceeab773f.css.map*/
+/*# sourceMappingURL=main.665b58b636e45d80bcd5.css.map*/
