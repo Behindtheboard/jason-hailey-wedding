@@ -270,7 +270,7 @@ function ourStory() {
       "",
       "시간이 지나며 우리의 사랑 이야기도 변했어요. 단순한 로맨스를 넘어 우정, 동반자 관계, 그리고 깊은 소속감이 되었죠. 우리는 서로를 보살피고, 힘들 때마다 서로를 일으켜 세우며, 함께 보내는 소소한 순간들 속에서 행복을 찾았어요. 그러다 보니 어느새, 우리는 정말 서로의 가장 친한 친구가 되어 있더라고요.",
       "",
-      "LA의 교통체증은 정말 사실이에요. 주말에만 서로 볼 수 있을 정도로 조금 떨어져 살지만, 이 거리감은 우리의 관계를 더 단단하게 만들어 주었어요. 매주, 지난 3년 동안 우리는 주말이 오기만을 손꼽아 기다렸답니다.",
+      "저희는 주말에만 볼수 있을 정도로 조금 떨어져 살았지만, 이 거리감은 우리의 관계를 더 단단하게 만들어 주었어요. 매주, 지난 3년 동안 우리는 주말이 오기만을 손꼽아 기다렸답니다.",
       "",
       "그리고 2024년 11월 23일, 우리는 서로에게 영원히 함께하자고 약속했어요! 사랑, 웃음, 그리고 꿈을 나눈 지난 3년의 시간을 지나, 이제 새로운 여정을 함께 시작하려 해요. 우리의 사랑과 우정의 여정을 함께 축하하며, 앞으로 펼쳐질 아름다운 모험에 함께해 주세요. 여러분과 함께 이 특별한 순간을 나누고 싶어요!",
     ],
@@ -578,6 +578,65 @@ function sound() {
 
 /***/ }),
 
+/***/ "./src/modules/translate.js":
+/*!**********************************!*\
+  !*** ./src/modules/translate.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ translate)
+/* harmony export */ });
+function translate() {
+  const languageSwitch = document.getElementById("languageSwitch");
+  const menuLinks = document.querySelectorAll("li a");
+  const secHeaders = document.querySelectorAll("h2");
+
+  //change menu names
+
+  const menuNames = {
+    english: ["home", "our story", "location", "registry", "rsvp"],
+    korean: ["홈", "우리의 이야기", "장소", "축의금", "rsvp"],
+  };
+
+  function menuTrans(textArr) {
+    menuLinks.forEach((link, i) => {
+      link.textContent = textArr[i];
+    });
+  }
+
+  menuTrans(menuNames.english);
+
+  //change header names
+
+  const headerNames = {
+    english: ["our story", "location", "registry"],
+    korean: ["우리의 이야기", "장소", "축의금"],
+  };
+
+  function headerTrans(textArr) {
+    secHeaders.forEach((header, i) => {
+      header.textContent = textArr[i];
+    });
+  }
+
+  headerTrans(headerNames.english);
+
+  languageSwitch.addEventListener("change", () => {
+    if (languageSwitch.checked) {
+      menuTrans(menuNames.korean);
+      headerTrans(headerNames.korean);
+    } else {
+      menuTrans(menuNames.english);
+      headerTrans(headerNames.english);
+    }
+  });
+}
+
+
+/***/ }),
+
 /***/ "./src/modules/volumeControl.js":
 /*!**************************************!*\
   !*** ./src/modules/volumeControl.js ***!
@@ -725,6 +784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/home */ "./src/modules/home.js");
 /* harmony import */ var _modules_rsvp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/rsvp */ "./src/modules/rsvp.js");
 /* harmony import */ var _modules_ourStory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/ourStory */ "./src/modules/ourStory.js");
+/* harmony import */ var _modules_translate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/translate */ "./src/modules/translate.js");
 
 
 
@@ -736,17 +796,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+(0,_modules_translate__WEBPACK_IMPORTED_MODULE_10__["default"])();
 (0,_modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_modules_home__WEBPACK_IMPORTED_MODULE_7__["default"])();
 (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_modules_sound__WEBPACK_IMPORTED_MODULE_5__["default"])()
-;(0,_modules_volumeControl__WEBPACK_IMPORTED_MODULE_6__["default"])()
-;(0,_modules_countdown__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_sound__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_modules_volumeControl__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_modules_countdown__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_modules_ourStory__WEBPACK_IMPORTED_MODULE_9__["default"])();
-(0,_modules_rsvp__WEBPACK_IMPORTED_MODULE_8__["default"])()
-;(0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_rsvp__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.b800f6edb264e3eb189c.js.map
+//# sourceMappingURL=main.d55b554e2247069f151c.js.map
