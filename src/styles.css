@@ -680,6 +680,10 @@ input:checked + .slider:before {
 
 /* Registry */
 
+#registry-container p {
+  font-size: 1.3rem;
+}
+
 /* RSVP */
 #rsvp-container {
   height: fit-content;
