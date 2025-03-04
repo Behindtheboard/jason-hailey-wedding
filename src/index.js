@@ -8,13 +8,15 @@ import volumeControl from "./modules/volumeControl";
 import home from "./modules/home";
 import rsvp from "./modules/rsvp";
 import ourStory from "./modules/ourStory";
+import translate from "./modules/translate";
 
+translate();
 noDoubleTap();
 home();
 dropdown();
-sound()
-volumeControl()
+sound();
+volumeControl();
 countdown();
 ourStory();
-rsvp()
+rsvp();
 loadVideo();
