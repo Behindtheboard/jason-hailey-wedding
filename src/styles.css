@@ -682,6 +682,7 @@ input:checked + .slider:before {
 
 #registry-container p {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 /* RSVP */
