@@ -683,6 +683,10 @@ input:checked + .slider:before {
 
 /* Registry */
 
+#registry-container p {
+  font-size: 1.3rem;
+}
+
 /* RSVP */
 #rsvp-container {
   height: fit-content;
@@ -931,4 +935,4 @@ button#rsvp {
 }
 
 
-/*# sourceMappingURL=main.46880c7d96d20a97b636.css.map*/
+/*# sourceMappingURL=main.7f0885e9594ceeab773f.css.map*/
