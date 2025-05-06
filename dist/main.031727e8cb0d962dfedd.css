@@ -293,7 +293,7 @@ header {
 /* Sound button */
 
 #unmute {
-  background-image: url(/fbfc4495e2ed12b09f8f.png);
+  background-image: url(/images/fbfc4495e2ed12b09f8f.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -305,7 +305,7 @@ header {
 }
 
 #mute {
-  background-image: url(/cb0707ff23a783d969c9.png);
+  background-image: url(/images/cb0707ff23a783d969c9.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -757,7 +757,7 @@ button#rsvp {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/a2e0e1e3f9576f1d219f.svg) no-repeat right 20px center;
+  background: url(/images/a2e0e1e3f9576f1d219f.svg) no-repeat right 20px center;
 }
 
 #rsvp-form button {
@@ -956,47 +956,62 @@ button#rsvp {
 /*!*******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/masonry.css ***!
   \*******************************************************************/
-/* Masonry grid (example) */
-.grid {
-  column-count: 3;
-  column-gap: 1em;
-}
-.grid-item {
-  break-inside: avoid;
-  margin-bottom: 1em;
-}
-.grid-item img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.grid-item img:hover {
-  transform: scale(1.03);
-}
+/* src/styles.css */
 
-/* Lightbox overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  cursor: zoom-out;
-}
-.overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
+/* 1) Masonry layout using CSS columns */
+.gallery {
+    column-count: 3;
+    column-gap: 1em;
+    padding: 1em;
+  }
+  
+  /* Each item avoids breaking between columns */
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Responsive: fewer columns on smaller screens */
+  @media (max-width: 800px) {
+    .gallery {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 500px) {
+    .gallery {
+      column-count: 1;
+    }
+  }
+  
+  /* 2) Lightbox styling */
+  .lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  .lightbox.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 4px;
+  }
+  
 
-
-/*# sourceMappingURL=main.2e2ac293eb06e868341f.css.map*/
+/*# sourceMappingURL=main.031727e8cb0d962dfedd.css.map*/
