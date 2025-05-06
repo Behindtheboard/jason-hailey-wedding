@@ -4,20 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/14fe5c4c6b11f41e871b.ico" />
   <title>Hailey + Jason</title>
-<script defer src="/main.4c54204d41d9b1085cbf.js"></script><link href="/main.665b58b636e45d80bcd5.css" rel="stylesheet"></head>
+<script defer src="/main.dc985c14e20bf1716321.js"></script><link href="/main.031727e8cb0d962dfedd.css" rel="stylesheet"></head>
 <body>
   <div id="container" style="display: block">
     <header>
       <div id="title">Hailey + Jason</div>
       <div id="dropdown-container">
-        <img id="menu-button" src="/fabef48463a14a5068d8.png" />
+        <img id="menu-button" src="/images/fabef48463a14a5068d8.png" />
         <ul id="dropdown-menu">
-          <div><img id="menu-close-button" src="/403cf8db4da4ef441a7b.png" /></div>
+          <div><img id="menu-close-button" src="/images/403cf8db4da4ef441a7b.png" /></div>
           <li><a href="" id="home">home</a></li>
           <li><a href="#our-story-container">our story</a></li>
-          <li><a href="#details-container">location</a></li>
           <li><a href="#registry-container">registry</a></li>
-          <li><a href="#rsvp-container">rsvp</a></li>
+          <li><a href="#details-container">details</a></li>
         </ul>
         <button id="unmute" class="visible"></button>
         <button id="mute"></button>
@@ -47,8 +46,8 @@
       <div id="countdown-container">
         <div id="counter"></div>
       </div>
+      <p></p>
       <div id="our-story-container" class="section">
-        <h2>our story</h2>
         <label class="switch">
           <input type="checkbox" id="languageSwitch" />
           <span class="slider">
@@ -56,11 +55,8 @@
             <span class="slider-text" id="kor">한글</span>
           </span>
         </label>
+        <h2>our story</h2>
         <div id="story"></div>
-      </div>
-      <div id="details-container" class="section">
-        <h2>location</h2>
-        <p>Malibu, CA</p>
       </div>
       <div id="registry-container" class="section">
         <h2>registry</h2>
@@ -75,10 +71,35 @@
           </p>
         </div>
       </div>
-      <div id="rsvp-container" class="section">
-        <button id="rsvp">rsvp</button>
-        <div id="rsvp-form-container"></div>
-        <p id="address">Address will be sent to you after you RSVP!</p>
+      <div id="details-container" class="section">
+        <h2></h2>
+        <a href="https://maps.app.goo.gl/NwaLdZU58KLasg3u8">
+          3464 Encinal Canyon Rd, Malibu, CA 90265
+        </a>
+
+        <h3></h3>
+        <p>
+          Parking will be on site! It's self parking on a small field, so make
+          sure to park accordingly!
+        </p>
+        <img id="parking-guide" src="/images/549c41ef70368ae867ae.png" />
+        <h3></h3>
+        <p>
+          We will be celebrating on gravel and grass, so we recommend block
+          heels for the ladies!
+        </p>
+        <p>Cocktail attire excluding any blue for everyone!</p>
+        <p></p>
+        <h2></h2>
+
+        <div class="gallery"></div>
+
+        <!-- Lightbox overlay -->
+        <div class="lightbox" id="lightbox">
+          <img src="about:blank" alt="Enlarged photo" />
+        </div>
+
+        <p></p>
       </div>
     </main>
   </div>
