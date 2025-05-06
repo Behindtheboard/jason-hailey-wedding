@@ -2,6 +2,18 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/masonry.css":
+/*!*************************!*\
+  !*** ./src/masonry.css ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/styles.css":
 /*!************************!*\
   !*** ./src/styles.css ***!
@@ -305,226 +317,6 @@ function ourStory() {
 
 /***/ }),
 
-/***/ "./src/modules/rsvp.js":
-/*!*****************************!*\
-  !*** ./src/modules/rsvp.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ rsvp)
-/* harmony export */ });
-function rsvp() {
-  const rsvp = document.getElementById("rsvp");
-  const formCtn = document.getElementById("rsvp-form-container");
-  const para = document.getElementById("address");
-
-  rsvp.addEventListener(
-    "click",
-    () => {
-      para.remove();
-
-      // Check if the form already exists to prevent duplication
-      if (document.getElementById("rsvp-form")) return;
-
-      const form = document.createElement("form");
-      form.id = "rsvp-form";
-
-      // Create Name field
-      const nameLabel = document.createElement("label");
-      nameLabel.setAttribute("for", "name");
-      nameLabel.textContent = "first and last name";
-      const nameInput = document.createElement("input");
-      nameInput.type = "text";
-      nameInput.id = "name";
-      nameInput.name = "name";
-      nameInput.required = true;
-
-      // Create Attending field (radio buttons)
-      // const attendingLabel = document.createElement("label");
-      // attendingLabel.setAttribute("for", "attending");
-      // attendingLabel.textContent = "bringing plus 1?";
-      // const yesLabel = document.createElement("label");
-      // yesLabel.setAttribute("for", "yes");
-      // yesLabel.textContent = "yes";
-      // const yesRadio = document.createElement("input");
-      // yesRadio.type = "radio";
-      // yesRadio.id = "yes";
-      // yesRadio.name = "attending";
-      // yesRadio.value = "yes";
-      // yesRadio.required = true;
-      // yesLabel.appendChild(yesRadio);
-
-      // const noLabel = document.createElement("label");
-      // noLabel.setAttribute("for", "no");
-      // noLabel.textContent = "no";
-      // const noRadio = document.createElement("input");
-      // noRadio.type = "radio";
-      // noRadio.id = "no";
-      // noRadio.name = "attending";
-      // noRadio.value = "no";
-      // noLabel.appendChild(noRadio);
-
-      // Create Dietary Preference field (dropdown)
-      const mealLabel = document.createElement("label");
-      mealLabel.setAttribute("for", "diet");
-      mealLabel.textContent = "dietary preference";
-      const mealSelect = document.createElement("select");
-      mealSelect.id = "diet";
-      mealSelect.name = "diet";
-
-      const anyOption = document.createElement("option");
-      anyOption.value = "anything";
-      anyOption.textContent = "anything";
-      const vegetarianOption = document.createElement("option");
-      vegetarianOption.value = "vegetarian";
-      vegetarianOption.textContent = "vegetarian";
-      const veganOption = document.createElement("option");
-      veganOption.value = "vegan";
-      veganOption.textContent = "vegan";
-
-      // Append options to select element
-      mealSelect.appendChild(anyOption);
-      mealSelect.appendChild(vegetarianOption);
-      mealSelect.appendChild(veganOption);
-
-      // Create Phone Number input
-      const phoneLabel = document.createElement("label");
-      phoneLabel.setAttribute("for", "phone");
-      phoneLabel.textContent = "phone number";
-      const phoneInput = document.createElement("input");
-      phoneInput.type = "text";
-      phoneInput.id = "phone";
-      phoneInput.name = "phone";
-
-      // Create Email field
-      const emailLabel = document.createElement("label");
-      emailLabel.setAttribute("for", "email");
-      emailLabel.textContent = "email address";
-      const emailInput = document.createElement("input");
-      emailInput.type = "email";
-      emailInput.id = "email";
-      emailInput.name = "email";
-      emailInput.required = true;
-
-      // Create Submit button
-      const submitButton = document.createElement("button");
-      submitButton.type = "submit";
-      submitButton.textContent = "submit";
-
-      // Append all elements to the form
-      form.appendChild(nameLabel);
-      form.appendChild(nameInput);
-      // form.appendChild(attendingLabel);
-      // form.appendChild(yesLabel);
-      // form.appendChild(noLabel);
-      form.appendChild(mealLabel);
-      form.appendChild(mealSelect);
-      form.appendChild(phoneLabel);
-      form.appendChild(phoneInput);
-      form.appendChild(emailLabel);
-      form.appendChild(emailInput);
-      form.appendChild(submitButton);
-
-      // Append the form to the body or a specific container
-      formCtn.appendChild(form);
-
-      // Scroll to the form
-      form.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      // Create loader container
-      const loader = document.createElement("div");
-      loader.classList.add("loader");
-
-      // Create bouncing heart
-      const bouncingHeart = document.createElement("div");
-      bouncingHeart.classList.add("bouncing-heart");
-
-      // Create loader text
-      const loaderText = document.createElement("div");
-      loaderText.classList.add("loader-text");
-      loaderText.textContent = "Submitting form";
-
-      // Append heart and text to loader
-      loader.appendChild(bouncingHeart);
-      loader.appendChild(loaderText);
-
-
-      // Handle form submission
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        document.body.appendChild(loader);
-
-        // Collect form data
-        const formData = new FormData(form);
-        // Validate email address
-        const email = formData.get("email");
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          alert("Please enter a valid email address.");
-          return;
-        }
-
-        // Collect form data
-        const data = {
-          name: formData.get("name"),
-          attending: formData.get("attending"),
-          diet: formData.get("diet"),
-          phone: formData.get("phone"),
-          email,
-        };
-
-        console.log(data); // Log data for testing (you can send this to Google Sheets or Twilio)
-
-        // Send form data to your server (Google Sheets, SMS, etc.)
-        const serverUrl =
-          "https://nameless-sea-30482-cb8f6e5a10a5.herokuapp.com/submit-rsvp";
-        fetch(serverUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            if (data.success) {
-              form.remove();
-              document.getElementById("rsvp").remove();
-              const submitted = document.createElement("h2");
-              submitted.textContent = "success! see you soon!";
-              formCtn.appendChild(submitted);
-            }
-          })
-          .catch((error) => {
-            console.error(error);
-            alert(
-              "There was an error submitting your rsvp. Call me if this happens! 404-232-9562"
-            );
-          })
-          .finally(() => {
-            // Remove the loader
-            if (document.body.contains(loader)) {
-              document.body.removeChild(loader);
-            }
-          });
-      });
-    },
-    { once: true }
-  );
-}
-
-
-/***/ }),
-
 /***/ "./src/modules/sound.js":
 /*!******************************!*\
   !*** ./src/modules/sound.js ***!
@@ -592,12 +384,14 @@ function translate() {
   const languageSwitch = document.getElementById("languageSwitch");
   const menuLinks = document.querySelectorAll("li a");
   const secHeaders = document.querySelectorAll("h2");
+  const thirHeaders = document.querySelectorAll("h3");
   const registryCtn = document.getElementById("registry-info");
+  const detailsCtn = document.querySelectorAll("#details-container p");
 
   //change menu names
   const menuNames = {
-    english: ["home", "our story", "location", "registry", "rsvp"],
-    korean: ["홈", "우리의 이야기", "장소", "축의금", "rsvp"],
+    english: ["home", "our story", "registry", "details"],
+    korean: ["홈", "우리의 이야기", "축의금", "정보"],
   };
 
   function menuTrans(textArr) {
@@ -609,8 +403,8 @@ function translate() {
 
   //change header names
   const headerNames = {
-    english: ["our story", "location", "registry"],
-    korean: ["우리의 이야기", "장소", "축의금"],
+    english: ["our story", "registry", "details", 'See you soon!'],
+    korean: ["우리의 이야기", "축의금", "정보"],
   };
 
   function headerTrans(textArr) {
@@ -620,22 +414,34 @@ function translate() {
   }
   headerTrans(headerNames.english);
 
+  //change header three names
+  const thirdHeaderNames = {
+    english: ["parking", "attire"],
+    korean: ["주차정보", "복장"],
+  };
+
+  function thirdHeaderTrans(textArr) {
+    thirHeaders.forEach((header, i) => {
+      header.textContent = textArr[i];
+    });
+  }
+  thirdHeaderTrans(thirdHeaderNames.english);
+
   //change registry info
   const regInfo = {
     english: [
       "We're just happy you're joining us!",
       "But if you insist, venmo or zelle would be amazing!",
-      "",
       "Venmo: @kjason",
       "Zelle: 917-599-6050",
     ],
     korean: [
       "저희의 시작을 함께 축하해주셔서 감사합니다!",
-      "",
       "벤모 (Venmo): @kjason",
       "젤 (Zelle): 917-599-6050",
     ],
   };
+
   function registryInfo(textArr) {
     registryCtn.innerHTML = "";
 
@@ -652,22 +458,42 @@ function translate() {
   }
   registryInfo(regInfo.english);
 
-  //Address info
-  const addInfo = document.getElementById("address");
-  addInfo.textContent = "Address will be sent to you after you RSVP!";
+  // translate details container
+
+  const detailsInfo = {
+    english: [
+      "Parking will be on site on a small field next to the venue. There will not be ushers to guide you, so we ask that you park accordingly!",
+      "Cocktail attire is recommended. Please refrain from navy/blues if possible!",
+      "We will be celebrating on gravel and grass, so we recommend block heels for the ladies!",
+    ],
+    korean: [
+      "주차는 결혼식 장소로 오시면 지정된 파킹장이 마련돼 있습니다!",
+      "칵테일/세미정장 복장, 파란색/남색은 피해주세요! ",
+      "결혼식 장소에 작은돌과 잔디가 있어요. 여성분들 뾰족한 힐은 불편하실수 있어요.",
+    ],
+  };
+
+  function detailsTrans(textArr) {
+    detailsCtn.forEach((text, i) => {
+      text.textContent = textArr[i];
+    });
+  }
+  detailsTrans(detailsInfo.english);
 
   languageSwitch.addEventListener("change", () => {
     if (languageSwitch.checked) {
       menuTrans(menuNames.korean);
       headerTrans(headerNames.korean);
+      thirdHeaderTrans(thirdHeaderNames.korean);
       registryInfo(regInfo.korean);
-      addInfo.textContent =
-        "결혼식 장소의 정확한 주소는 RSVP 후이메일로 보내 드릴게요!";
+      detailsTrans(detailsInfo.korean);
+
     } else {
       menuTrans(menuNames.english);
       headerTrans(headerNames.english);
+      thirdHeaderTrans(thirdHeaderNames.english);
       registryInfo(regInfo.english);
-      addInfo.textContent = "Address will be sent to you after you RSVP!";
+      detailsTrans(detailsInfo.english);
     }
   });
 }
@@ -814,13 +640,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loadVideo */ "./src/modules/loadVideo.js");
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./src/styles.css");
-/* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/dropdown */ "./src/modules/dropdown.js");
-/* harmony import */ var _modules_countdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/countdown */ "./src/modules/countdown.js");
-/* harmony import */ var _modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/noDoubleTap */ "./src/modules/noDoubleTap.js");
-/* harmony import */ var _modules_sound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/sound */ "./src/modules/sound.js");
-/* harmony import */ var _modules_volumeControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/volumeControl */ "./src/modules/volumeControl.js");
-/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/home */ "./src/modules/home.js");
-/* harmony import */ var _modules_rsvp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/rsvp */ "./src/modules/rsvp.js");
+/* harmony import */ var _masonry_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./masonry.css */ "./src/masonry.css");
+/* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown */ "./src/modules/dropdown.js");
+/* harmony import */ var _modules_countdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/countdown */ "./src/modules/countdown.js");
+/* harmony import */ var _modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/noDoubleTap */ "./src/modules/noDoubleTap.js");
+/* harmony import */ var _modules_sound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/sound */ "./src/modules/sound.js");
+/* harmony import */ var _modules_volumeControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/volumeControl */ "./src/modules/volumeControl.js");
+/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/home */ "./src/modules/home.js");
 /* harmony import */ var _modules_ourStory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/ourStory */ "./src/modules/ourStory.js");
 /* harmony import */ var _modules_translate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/translate */ "./src/modules/translate.js");
 
@@ -836,18 +662,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_modules_translate__WEBPACK_IMPORTED_MODULE_10__["default"])();
-(0,_modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_modules_home__WEBPACK_IMPORTED_MODULE_7__["default"])();
-(0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_modules_sound__WEBPACK_IMPORTED_MODULE_5__["default"])();
-(0,_modules_volumeControl__WEBPACK_IMPORTED_MODULE_6__["default"])();
-(0,_modules_countdown__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_noDoubleTap__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_modules_home__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_sound__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_modules_volumeControl__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_modules_countdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_modules_ourStory__WEBPACK_IMPORTED_MODULE_9__["default"])();
-(0,_modules_rsvp__WEBPACK_IMPORTED_MODULE_8__["default"])();
+// rsvp();
 (0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.4c54204d41d9b1085cbf.js.map
+//# sourceMappingURL=main.1197aeddd84c34432c10.js.map
