@@ -34,8 +34,8 @@ export default function translate() {
 
   //change header three names
   const thirdHeaderNames = {
-    english: ["parking", "attire"],
-    korean: ["주차정보", "복장"],
+    english: ["ceremony","parking", "attire"],
+    korean: ["결혼식","주차정보", "복장"],
   };
 
   function thirdHeaderTrans(textArr) {
@@ -80,11 +80,13 @@ export default function translate() {
 
   const detailsInfo = {
     english: [
+      "Please arrive by 3:30PM",
       "Parking will be on site on a small field next to the venue. There will not be ushers to guide you, so we ask that you park accordingly!",
       "Cocktail attire is recommended. Please refrain from navy/blues if possible!",
       "We will be celebrating on gravel and grass, so we recommend block heels for the ladies!",
     ],
     korean: [
+      "오후 3시 30분까지 도착해 주세요.",
       "주차는 결혼식 장소로 오시면 지정된 파킹장이 마련돼 있습니다!",
       "칵테일/세미정장 복장, 파란색/남색은 피해주세요! ",
       "결혼식 장소에 작은돌과 잔디가 있어요. 여성분들 뾰족한 힐은 불편하실수 있어요.",
