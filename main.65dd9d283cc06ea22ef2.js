@@ -523,7 +523,7 @@ function translate() {
 
   //change header names
   const headerNames = {
-    english: ["our story", "registry", "details", 'See you soon!'],
+    english: ["our story", "registry", "details", "See you soon!"],
     korean: ["우리의 이야기", "축의금", "정보"],
   };
 
@@ -536,8 +536,8 @@ function translate() {
 
   //change header three names
   const thirdHeaderNames = {
-    english: ["ceremony","parking", "attire"],
-    korean: ["결혼식","주차정보", "복장"],
+    english: ["ceremony", "parking", "attire"],
+    korean: ["결혼식", "주차정보", "복장"],
   };
 
   function thirdHeaderTrans(textArr) {
@@ -586,12 +586,14 @@ function translate() {
       "Parking will be on site on a small field next to the venue. There will not be ushers to guide you, so we ask that you park accordingly!",
       "Cocktail attire is recommended. Please refrain from navy/blues if possible!",
       "We will be celebrating on gravel and grass, so we recommend block heels for the ladies!",
+      "Reception and ceremony will be outdoors, so please bring something warm for when it gets chilly in the evening!",
     ],
     korean: [
       "오후 3시 30분까지 도착해 주세요.",
       "주차는 결혼식 장소로 오시면 지정된 파킹장이 마련돼 있습니다!",
       "칵테일/세미정장 복장, 파란색/남색은 피해주세요! ",
       "결혼식 장소에 작은돌과 잔디가 있어요. 여성분들 뾰족한 힐은 불편하실수 있어요.",
+      "결혼식과 리셉션 둘다 밖에서 진행될 예정이 따듯한 옷도 함께 준비하시는거 추천해요!",
     ],
   };
 
@@ -609,7 +611,6 @@ function translate() {
       thirdHeaderTrans(thirdHeaderNames.korean);
       registryInfo(regInfo.korean);
       detailsTrans(detailsInfo.korean);
-
     } else {
       menuTrans(menuNames.english);
       headerTrans(headerNames.english);
@@ -1013,4 +1014,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.e8671ad1360a5bfa0710.js.map
+//# sourceMappingURL=main.65dd9d283cc06ea22ef2.js.map
