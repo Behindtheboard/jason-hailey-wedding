@@ -225,6 +225,68 @@ function home() {
 
 /***/ }),
 
+/***/ "./src/modules/lightbox.js":
+/*!*********************************!*\
+  !*** ./src/modules/lightbox.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ lightbox)
+/* harmony export */ });
+/* harmony import */ var _img_ParkingGuide_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/ParkingGuide.png */ "./src/img/ParkingGuide.png");
+
+
+function lightbox() {
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+  const images = importAll(
+    __webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$")
+  );
+
+  // Grab gallery and lightbox elements
+  const gallery = document.querySelector(".gallery");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  const parkingGuide = document.getElementById("parking-guide");
+  parkingGuide.addEventListener("click", () => {
+    lightboxImg.src = _img_ParkingGuide_png__WEBPACK_IMPORTED_MODULE_0__;
+    lightbox.classList.add("active");
+  });
+
+  // 1) Build the gallery
+  images.forEach((src) => {
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Photo";
+    img.style.width = "100%";
+    item.appendChild(img);
+    gallery.appendChild(item);
+
+    // 2) Click → show in lightbox
+    item.addEventListener("click", () => {
+      lightboxImg.src = src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  // 3) Click on overlay to close
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.classList.remove("active");
+    }
+  });
+}
+
+
+/***/ }),
+
 /***/ "./src/modules/loadVideo.js":
 /*!**********************************!*\
   !*** ./src/modules/loadVideo.js ***!
@@ -474,8 +536,8 @@ function translate() {
 
   //change header three names
   const thirdHeaderNames = {
-    english: ["parking", "attire"],
-    korean: ["주차정보", "복장"],
+    english: ["ceremony","parking", "attire"],
+    korean: ["결혼식","주차정보", "복장"],
   };
 
   function thirdHeaderTrans(textArr) {
@@ -520,11 +582,13 @@ function translate() {
 
   const detailsInfo = {
     english: [
+      "Please arrive by 3:30PM",
       "Parking will be on site on a small field next to the venue. There will not be ushers to guide you, so we ask that you park accordingly!",
       "Cocktail attire is recommended. Please refrain from navy/blues if possible!",
       "We will be celebrating on gravel and grass, so we recommend block heels for the ladies!",
     ],
     korean: [
+      "오후 3시 30분까지 도착해 주세요.",
       "주차는 결혼식 장소로 오시면 지정된 파킹장이 마련돼 있습니다!",
       "칵테일/세미정장 복장, 파란색/남색은 피해주세요! ",
       "결혼식 장소에 작은돌과 잔디가 있어요. 여성분들 뾰족한 힐은 불편하실수 있어요.",
@@ -807,6 +871,17 @@ module.exports = __webpack_require__.p + "images/37cab1708c82942fb0f2.jpg";
 
 /***/ }),
 
+/***/ "./src/img/ParkingGuide.png":
+/*!**********************************!*\
+  !*** ./src/img/ParkingGuide.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/549c41ef70368ae867ae.png";
+
+/***/ }),
+
 /***/ "./src/videos/bg-video-16-9.mp4":
 /*!**************************************!*\
   !*** ./src/videos/bg-video-16-9.mp4 ***!
@@ -909,6 +984,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/home */ "./src/modules/home.js");
 /* harmony import */ var _modules_ourStory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/ourStory */ "./src/modules/ourStory.js");
 /* harmony import */ var _modules_translate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/translate */ "./src/modules/translate.js");
+/* harmony import */ var _modules_lightbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/lightbox */ "./src/modules/lightbox.js");
+
 
 
 
@@ -929,50 +1006,11 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_volumeControl__WEBPACK_IMPORTED_MODULE_7__["default"])();
 (0,_modules_countdown__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_modules_ourStory__WEBPACK_IMPORTED_MODULE_9__["default"])();
-// rsvp();
 (0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
-
-
-
-
-// Require all images in the /images folder
-function importAll(r) {
-  return r.keys().map(r);
-}
-const images = importAll(__webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$"));
-
-// Grab gallery and lightbox elements
-const gallery = document.querySelector('.gallery');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox.querySelector('img');
-
-// 1) Build the gallery
-images.forEach(src => {
-  const item = document.createElement('div');
-  item.className = 'gallery-item';
-  const img = document.createElement('img');
-  img.src = src;
-  img.alt = 'Photo';
-  img.style.width = '100%';
-  item.appendChild(img);
-  gallery.appendChild(item);
-
-  // 2) Click → show in lightbox
-  item.addEventListener('click', () => {
-    lightboxImg.src = src;
-    lightbox.classList.add('active');
-  });
-});
-
-// 3) Click on overlay to close
-lightbox.addEventListener('click', e => {
-  if (e.target !== lightboxImg) {
-    lightbox.classList.remove('active');
-  }
-});
+(0,_modules_lightbox__WEBPACK_IMPORTED_MODULE_11__["default"])();
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.dc985c14e20bf1716321.js.map
+//# sourceMappingURL=main.e8671ad1360a5bfa0710.js.map
