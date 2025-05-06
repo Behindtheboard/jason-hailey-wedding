@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/masonry.css":
@@ -8,6 +7,7 @@
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -20,9 +20,59 @@ __webpack_require__.r(__webpack_exports__);
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./src/images sync \\.(png%7Cjpe?g%7Cgif)$":
+/*!**************************************************************!*\
+  !*** ./src/images/ sync nonrecursive \.(png%7Cjpe?g%7Cgif)$ ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./1F1A0229.jpg": "./src/images/1F1A0229.jpg",
+	"./1F1A0267.jpg": "./src/images/1F1A0267.jpg",
+	"./1F1A0277.jpg": "./src/images/1F1A0277.jpg",
+	"./1F1A0304.jpg": "./src/images/1F1A0304.jpg",
+	"./1F1A0502.jpg": "./src/images/1F1A0502.jpg",
+	"./1F1A0702-Edit.jpg": "./src/images/1F1A0702-Edit.jpg",
+	"./1F1A0724.jpg": "./src/images/1F1A0724.jpg",
+	"./1F1A0760.jpg": "./src/images/1F1A0760.jpg",
+	"./1F1A0878.jpg": "./src/images/1F1A0878.jpg",
+	"./1F1A1095.jpg": "./src/images/1F1A1095.jpg",
+	"./1F1A1107.jpg": "./src/images/1F1A1107.jpg",
+	"./1F1A1111.jpg": "./src/images/1F1A1111.jpg",
+	"./1F1A9354.jpg": "./src/images/1F1A9354.jpg",
+	"./1F1A9510-2.jpg": "./src/images/1F1A9510-2.jpg",
+	"./1F1A9609.jpg": "./src/images/1F1A9609.jpg",
+	"./1F1A9640.jpg": "./src/images/1F1A9640.jpg",
+	"./1F1A9767.jpg": "./src/images/1F1A9767.jpg",
+	"./1F1A9822.jpg": "./src/images/1F1A9822.jpg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/images sync \\.(png%7Cjpe?g%7Cgif)$";
 
 /***/ }),
 
@@ -32,6 +82,7 @@ __webpack_require__.r(__webpack_exports__);
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ countdown)
@@ -118,6 +169,7 @@ function countdown() {
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ dropdown)
@@ -155,6 +207,7 @@ function dropdown() {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ home)
@@ -178,6 +231,7 @@ function home() {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ loadVideo)
@@ -227,6 +281,7 @@ function loadVideo() {
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
@@ -258,6 +313,7 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ourStory)
@@ -323,6 +379,7 @@ function ourStory() {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ sound)
@@ -376,6 +433,7 @@ function sound() {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ translate)
@@ -507,6 +565,7 @@ function translate() {
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ volumeControl)
@@ -550,12 +609,211 @@ function volumeControl() {
 
 /***/ }),
 
+/***/ "./src/images/1F1A0229.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0229.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/164533773ba805d1a856.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0267.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0267.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/ad1d8394c531999170c3.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0277.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0277.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/cfa9c553885d9af81d35.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0304.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0304.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/9506f9414de030798dd1.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0502.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0502.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/765b6dcf7ca10bc5d6db.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0702-Edit.jpg":
+/*!**************************************!*\
+  !*** ./src/images/1F1A0702-Edit.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/2c2203ba064dacd8d413.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0724.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0724.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/cd199947b92950a0f848.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0760.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0760.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/592a83265ec9abe49e15.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A0878.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A0878.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/ab3f57e6c018109cf132.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A1095.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A1095.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/b8e059213ea9c4e9d487.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A1107.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A1107.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/082556f386fe67e68921.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A1111.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A1111.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/84674793f69c3915d5b6.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9354.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A9354.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/95f89a71690077a4e0a4.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9510-2.jpg":
+/*!***********************************!*\
+  !*** ./src/images/1F1A9510-2.jpg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/5e38710457d09786a326.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9609.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A9609.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/df2e637183dd69dbeeed.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9640.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A9640.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/176abd7306d73fa8b97e.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9767.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A9767.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/e15200fc895186327610.jpg";
+
+/***/ }),
+
+/***/ "./src/images/1F1A9822.jpg":
+/*!*********************************!*\
+  !*** ./src/images/1F1A9822.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/37cab1708c82942fb0f2.jpg";
+
+/***/ }),
+
 /***/ "./src/videos/bg-video-16-9.mp4":
 /*!**************************************!*\
   !*** ./src/videos/bg-video-16-9.mp4 ***!
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "e17dac46bfb694bbdc4f.mp4";
 
 /***/ }),
@@ -566,6 +824,7 @@ module.exports = __webpack_require__.p + "e17dac46bfb694bbdc4f.mp4";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "b8af2f0c0369dbd9f074.mp4";
 
 /***/ })
@@ -632,8 +891,9 @@ module.exports = __webpack_require__.p + "b8af2f0c0369dbd9f074.mp4";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -672,8 +932,47 @@ __webpack_require__.r(__webpack_exports__);
 // rsvp();
 (0,_modules_loadVideo__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
+
+
+
+// Require all images in the /images folder
+function importAll(r) {
+  return r.keys().map(r);
+}
+const images = importAll(__webpack_require__("./src/images sync \\.(png%7Cjpe?g%7Cgif)$"));
+
+// Grab gallery and lightbox elements
+const gallery = document.querySelector('.gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+// 1) Build the gallery
+images.forEach(src => {
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = 'Photo';
+  img.style.width = '100%';
+  item.appendChild(img);
+  gallery.appendChild(item);
+
+  // 2) Click → show in lightbox
+  item.addEventListener('click', () => {
+    lightboxImg.src = src;
+    lightbox.classList.add('active');
+  });
+});
+
+// 3) Click on overlay to close
+lightbox.addEventListener('click', e => {
+  if (e.target !== lightboxImg) {
+    lightbox.classList.remove('active');
+  }
+});
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.1197aeddd84c34432c10.js.map
+//# sourceMappingURL=main.dc985c14e20bf1716321.js.map
