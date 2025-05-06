@@ -1,0 +1,41 @@
+/* Masonry grid (example) */
+.grid {
+  column-count: 3;
+  column-gap: 1em;
+}
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: 1em;
+}
+.grid-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.grid-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
