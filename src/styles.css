@@ -842,7 +842,7 @@ button#rsvp {
 }
 
 #parking-guide {
-  max-width:70vw;
+  max-width: 70vw;
 }
 
 /* Media Queries */
@@ -877,7 +877,6 @@ button#rsvp {
     width: 250px;
   }
 
-    
   #parking-guide {
     max-width: 30vw;
   }
@@ -897,7 +896,6 @@ button#rsvp {
   div#countdown-container {
     transform: translateY(-150px);
   }
-  
 }
 1
 /* Computer */
@@ -948,4 +946,3 @@ button#rsvp {
     max-width: 30vw;
   }
 }
-
