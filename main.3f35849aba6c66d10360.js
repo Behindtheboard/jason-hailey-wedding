@@ -35,6 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var map = {
 	"./1F1A0229.jpg": "./src/images/1F1A0229.jpg",
+	"./1F1A0254-2.jpg": "./src/images/1F1A0254-2.jpg",
 	"./1F1A0267.jpg": "./src/images/1F1A0267.jpg",
 	"./1F1A0277.jpg": "./src/images/1F1A0277.jpg",
 	"./1F1A0304.jpg": "./src/images/1F1A0304.jpg",
@@ -45,7 +46,6 @@ var map = {
 	"./1F1A0878.jpg": "./src/images/1F1A0878.jpg",
 	"./1F1A1095.jpg": "./src/images/1F1A1095.jpg",
 	"./1F1A1107.jpg": "./src/images/1F1A1107.jpg",
-	"./1F1A1111.jpg": "./src/images/1F1A1111.jpg",
 	"./1F1A9354.jpg": "./src/images/1F1A9354.jpg",
 	"./1F1A9510-2.jpg": "./src/images/1F1A9510-2.jpg",
 	"./1F1A9609.jpg": "./src/images/1F1A9609.jpg",
@@ -685,6 +685,17 @@ module.exports = __webpack_require__.p + "images/164533773ba805d1a856.jpg";
 
 /***/ }),
 
+/***/ "./src/images/1F1A0254-2.jpg":
+/*!***********************************!*\
+  !*** ./src/images/1F1A0254-2.jpg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/bca7a6651641abe15064.jpg";
+
+/***/ }),
+
 /***/ "./src/images/1F1A0267.jpg":
 /*!*********************************!*\
   !*** ./src/images/1F1A0267.jpg ***!
@@ -792,17 +803,6 @@ module.exports = __webpack_require__.p + "images/b8e059213ea9c4e9d487.jpg";
 
 "use strict";
 module.exports = __webpack_require__.p + "images/082556f386fe67e68921.jpg";
-
-/***/ }),
-
-/***/ "./src/images/1F1A1111.jpg":
-/*!*********************************!*\
-  !*** ./src/images/1F1A1111.jpg ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "images/84674793f69c3915d5b6.jpg";
 
 /***/ }),
 
@@ -1014,4 +1014,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.65dd9d283cc06ea22ef2.js.map
+//# sourceMappingURL=main.3f35849aba6c66d10360.js.map

@@ -845,7 +845,7 @@ button#rsvp {
 }
 
 #parking-guide {
-  max-width:70vw;
+  max-width: 70vw;
 }
 
 /* Media Queries */
@@ -880,7 +880,6 @@ button#rsvp {
     width: 250px;
   }
 
-    
   #parking-guide {
     max-width: 30vw;
   }
@@ -900,7 +899,6 @@ button#rsvp {
   div#countdown-container {
     transform: translateY(-150px);
   }
-  
 }
 1
 /* Computer */
@@ -951,7 +949,6 @@ button#rsvp {
     max-width: 30vw;
   }
 }
-
 
 /*!*******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/masonry.css ***!
@@ -1014,4 +1011,4 @@ button#rsvp {
   }
   
 
-/*# sourceMappingURL=main.031727e8cb0d962dfedd.css.map*/
+/*# sourceMappingURL=main.367dcafc92f9d16a24b0.css.map*/
